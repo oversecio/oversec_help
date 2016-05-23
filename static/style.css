@@ -37,6 +37,11 @@ div.page {
    
 }
 
+.headline {
+      color: white;
+  font-size: 24px;
+}
+
 .oversec-header {
   background: linear-gradient(#ffa726, #ef6c00);
 
