@@ -55,7 +55,27 @@
           }
         
           if ('main_keys'==xalias) {
-            redirectpage(lang+'/d_encryption-parameters/m_symmeric-keys');
+            redirectpage(lang+'/d_encryption-parameters/m_symmetric-keys');
+            return;
+          }
+        
+          if ('symkey_create_pbkdf'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/m_symmetric-keys/m_key-create#pbkdf');
+            return;
+          }
+        
+          if ('symkey_create_random'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/m_symmetric-keys/m_key-create#random');
+            return;
+          }
+        
+          if ('symkey_create_scan'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/m_symmetric-keys/m_key-create#scan');
+            return;
+          }
+        
+          if ('symkey_details'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/m_symmetric-keys/a_key-details');
             return;
           }
         
@@ -137,7 +157,17 @@ function w3_close() {
   <a class="menuentry" href="../d_encryption-parameters/"><h5>Encryption Parameters</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="../d_encryption-parameters/m_symmeric-keys/"><h5>Symmetric Keys</h5></a>
+  <a class="menuentry" href="../d_encryption-parameters/m_symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    
+      <div class="menuindent">
+  <a class="menuentry" href="../d_encryption-parameters/m_symmetric-keys/a_key-details/"><h5>Key Details</h5></a>
+    
+  
+  
+  <a class="menuentry" href="../d_encryption-parameters/m_symmetric-keys/m_key-create/"><h5>Create Key</h5></a>
+    
+  
+  </div>
     
   
   </div>
@@ -166,7 +196,7 @@ function w3_close() {
   <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
   Oversec Help
   </span>
-  <div style="float: right; display: inline-block; margin-right:30px">
+  <div style="float: right; display: inline-block; margin-right:5px">
       <a href="../de/"><img src="../static/flags/DE.png"></a>
       <a href="../"><img src="../static/flags/GB.png"></a>
   </div>
