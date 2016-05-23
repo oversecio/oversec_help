@@ -1,0 +1,150 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Welcome to Oversec Help! — Oversec Help</title>
+
+     <script>
+
+    function redirectpage(dest) {
+      
+      if (window.location.pathname!=dest) {
+        if (window.location.replace)
+          window.location.replace(dest)
+        else
+          window.location=dest
+      }
+    }
+
+
+      function resolveAlias(lang,xalias) {
+        
+        
+          if ('encparams_pgp'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/#pgp');
+            return;
+          }
+        
+          if ('encparams_simple'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/#simple');
+            return;
+          }
+        
+          if ('encparams_sym'==xalias) {
+            redirectpage(lang+'/d_encryption-parameters/#sym');
+            return;
+          }
+        
+          if ('def'==xalias) {
+            redirectpage(lang+'/topic_a/topic-a-b/');
+            return;
+          }
+        
+        redirectpage(lang+'/index.html');
+      }  
+
+     function resolve(lang) {
+
+          var hash =window.location.hash.substring(1);
+          if (hash.startsWith('alias_')) {
+            resolveAlias(lang,hash.substring(6));
+         }
+         else {
+            redirectpage(lang+'/index.html');
+         }
+     }
+
+    /*
+    Browser Language Redirect script- By JavaScript Kit
+    For this and over 400+ free scripts, visit http://www.javascriptkit.com
+    This notice must stay intact
+    */
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes=new Array("en", "de", "default")
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects=new Array("", "de", "")
+    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+    var gotodefault=1
+    
+
+    for (i=0;i<langcodes.length-1;i++){
+      if (languageinfo.substr(0,2)==langcodes[i]) {
+        resolve(langredirects[i])
+        gotodefault=0
+        break
+      }
+    }
+
+    if (gotodefault)
+      resolve(langredirects[langcodes.length-1])
+    </script>
+ 
+
+</head>
+<body>
+
+
+<!-- note, menu stuff taken from here: http://codepen.io/chriscoyier/pen/umEgv -->
+<nav class="main-nav" id="main-nav">
+
+  
+  <div><a  href="../">Welcome to Oversec Help!</a>
+    
+      <div class="menuindent">
+  <div><a  href="../d_encryption-parameters/">Encryption Parameters</a>
+    
+  </div> 
+  
+  <div><a  href="../y_faq/">FAQ</a>
+    
+  </div> 
+  
+  <div><a  href="../z_contact/">Contact</a>
+    
+  </div> 
+  </div>
+    
+  </div> 
+  
+
+</nav>
+
+
+<div class="page-wrap">
+
+<header class="main-header">
+
+    <a href="#main-nav" class="open-menu toggle">
+      ☰
+    </a>
+    <a href="#" class="close-menu toggle">
+      ☰
+    </a>
+
+<span class="headline">
+Oversec Help
+</span>
+
+<div style="float: right; display: inline-block; margin-right:30px">
+      <a href="../de/"><img src="../static/flags/DE.png"></a>
+      <a href="../"><img src="../static/flags/GB.png"></a>
+</div>
+
+  </header>
+
+ <div class="content">  <div class="page">
+    
+  <h2>Welcome to Oversec Help!</h2>
+  <p>This is a basic demo website that shows how to use Lektor for a basic
+website with some pages.</p>
+
+
+  </div>
+
+
+
+  <footer>
+    &copy; Copyright 2016 by oversec.io.
+  </footer>
+</div> 
+</body>
