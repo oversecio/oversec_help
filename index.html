@@ -75,6 +75,11 @@
             return;
           }
         
+          if ('main_settings'==xalias) {
+            redirectpage(lang+'/setup/#main_settings');
+            return;
+          }
+        
           if ('main_keys'==xalias) {
             redirectpage(lang+'/encryption-parameters/symmetric-keys');
             return;
@@ -115,13 +120,33 @@
             return;
           }
         
-          if ('button_hide_nothidden'==xalias) {
-            redirectpage(lang+'/TODO');
+          if ('button_hide_visible'==xalias) {
+            redirectpage(lang+'/buttons/#button_hide_visible');
             return;
           }
         
           if ('button_hide_hidden'==xalias) {
-            redirectpage(lang+'/TODO');
+            redirectpage(lang+'/buttons/#button_hide_hidden');
+            return;
+          }
+        
+          if ('button_encrypt_initial'==xalias) {
+            redirectpage(lang+'/buttons/#button_encrypt_initial');
+            return;
+          }
+        
+          if ('button_encrypt_encryptionparamsremembered'==xalias) {
+            redirectpage(lang+'/buttons/#button_encrypt_encryptionparamsremembered');
+            return;
+          }
+        
+          if ('input_insufficientpadding'==xalias) {
+            redirectpage(lang+'/encoding/#insufficientpadding');
+            return;
+          }
+        
+          if ('input_corruptedencoding'==xalias) {
+            redirectpage(lang+'/encoding/#corrupted');
             return;
           }
         
@@ -199,6 +224,14 @@ function w3_close() {
   <a class="menuentry" href="/"><h5>Welcome to Oversec Help!</h5></a>
     
       <div class="menuindent">
+  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    
+  
+  
   <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
     
       <div class="menuindent">

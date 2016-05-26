@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/static/style.css">
 
 
-  <title>Contact — Oversec Help</title>
+  <title>Buttons — Oversec Help</title>
 
      <script>
 
@@ -118,15 +118,34 @@ function w3_close() {
   Oversec Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-      <a href="/de/contact/"><img src="/static/flags/DE.png"></a>
-      <a href="/contact/"><img src="/static/flags/GB.png"></a>
+      <a href="/de/buttons/"><img src="/static/flags/DE.png"></a>
+      <a href="/buttons/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:75px">
     
-  <h2>Contact</h2>
-  <p>TODO Contact</p>
+  <h2>Buttons</h2>
+  <p><a name="button_hide"/></p>
+<h3>Hide/Show-Button</h3>
+<p>TODO: 
+<a name="button_hide_visible"/></p>
+<ul>
+<li>single tap temporarily hides
+<a name="button_hide_hidden"/></li>
+<li>single tap at same position on screen brings back (unhides) oversec</li>
+<li>long-tap means the "panic" button, clears all remembered passwords and stops oversec.</li>
+</ul>
+<p><a name="button_encrypt"/></p>
+<h3>Encrypt-Button</h3>
+<p><a name="button_encrypt_initial"/>
+Tap this button to encrypt the entered text. After the text has been encrypted, this button automatically disappears. So if you place this button over the underlying app's "send" or "save" button, you can make sure that you do not accidentially send or save plain text.</p>
+<p><a name="button_encrypt_encryptionparamsremembered"/>
+If you have not encrypted anything yet in this app, tapping this button will bring up a screen to enter or modify the encryption params. Next time you tap this button, those params will be used and the encryption will happen instantly. 
+If you still want to change the encryption params, long-tap on this button to forcefully bring up the encryption-params screen.</p>
+<p>Note: This button can be dragged around the input field.</p>
+<h3>TODO: other buttons (config, Info, camera, decrypt, ...)</h3>
+<p>TODO: include pictures of the buttons</p>
 
 
 </div>
