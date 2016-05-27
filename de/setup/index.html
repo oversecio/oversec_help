@@ -137,15 +137,29 @@ function w3_close() {
   <p><a name="main_help"></a>
 <a name="main_help_acsconfig"></a></p>
 <h3>Required Setup</h3>
-<p>TODO: explain how oversec works and why it is an ACS</p>
-<p>TODO: include a screenshot of ACS settings and show what to do there</p>
-<h3><a name="main_apps"></a>Configure Apps for Oversec</h3>
+<p>The basic operating principle of Oversec is that it constantly monitors the screen for encrypted text.</p>
+<p>To be able to read the screen contents, it has to be enabled as a so called "Accessibility Service".</p>
+<p>So as the first step, before you can use Oversec, you need to enable Oversec as an Accessibility Service in Androids "Accessibility Settings".</p>
+<p>Tapping on "Configure" will leas you directly to the relevant Settings page:</p>
+<p>Now tap on "Oversec"</p>
+<figure  style="float: left; ">
+<figcaption>(Android 4.x "Kitkat")</figcaption>
+<img src="acs_settings_step_1_K.png"></img>
+</figure><figure  style="float: left; ">
+<figcaption>(Android 5++)</figcaption>
+<img src="acs_settings_step_1_L.png"></img>
+</figure><p style="clear: both;">&nbsp;</p><h3><a name="main_apps"></a>Configure Apps for Oversec</h3>
 <p>This is the list of all apps you currently have installed.</p>
 <p>The Oversec buttons and overlays will only show on top of apps that are checked here.
 Please review the list and check all apps that you want to work with Oversec.</p>
 <p><em>Note: Tap on the questionmark icon on any app to show additional, Oversec-related information for this app.</em></p>
 <p><em>Note: You can also deactivate an app for Oversec after pressing the Oversec Config-Button while the app is shown.</em></p>
+<h3>Symmetric Keys</h3>
+<p>See <a href="/encryption-parameters/symmetric-keys">Symmetric Keys</a></p>
 <h3><a name="main_settings"></a>General Settings</h3>
+<h4>Allow Screenshots</h4>
+<p>By default, Oversec prevents the system from taking screenhots while showing sensitive information. Depending on the way the screenshots are made, taking screenshots either fails or produces a blank or black image.</p>
+<p>You can disable this behavior temporarily if you want to take screenshots to show or tell about Oversec, but we strongly recommend to keep this setting OFF!</p>
 
 
 </div>
