@@ -100,6 +100,11 @@
             return;
           }
         
+          if ('main_padders'==xalias) {
+            redirectpage(lang+'/setup/decoy');
+            return;
+          }
+        
           if ('symkey_create_pbkdf'==xalias) {
             redirectpage(lang+'/encryption-parameters/symmetric-keys/key-create#pbkdf');
             return;
@@ -263,6 +268,14 @@ function w3_close() {
   <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
     
       <div class="menuindent">
+  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    
+  
+  
+  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    
+  
+  
   <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
     
       <div class="menuindent">
