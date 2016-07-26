@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/static/style.css">
 
 
-  <title>Welcome to Oversec Help! — Oversec Help</title>
+  <title>Welcome — Oversec Online Help</title>
 
      <script>
 
@@ -106,22 +106,22 @@
           }
         
           if ('symkey_create_pbkdf'==xalias) {
-            redirectpage(lang+'/encryption-parameters/symmetric-keys/key-create#pbkdf');
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#pbkdf');
             return;
           }
         
           if ('symkey_create_random'==xalias) {
-            redirectpage(lang+'/encryption-parameters/symmetric-keys/key-create#random');
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#random');
             return;
           }
         
           if ('symkey_create_scan'==xalias) {
-            redirectpage(lang+'/encryption-parameters/symmetric-keys/key-create#scan');
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#scan');
             return;
           }
         
           if ('symkey_details'==xalias) {
-            redirectpage(lang+'/encryption-parameters/symmetric-keys/key-details');
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#details');
             return;
           }
         
@@ -246,7 +246,7 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome to Oversec Help!</h5></a>
+  <a class="menuentry" href="/"><h5>Welcome</h5></a>
     
       <div class="menuindent">
   <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
@@ -302,16 +302,6 @@ function w3_close() {
       <div class="menuindent">
   <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
     
-      <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-details/"><h5>Key Details</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-create/"><h5>Create Key</h5></a>
-    
-  
-  </div>
-    
   
   </div>
     
@@ -337,21 +327,103 @@ function w3_close() {
 
   <span class="headline">
   <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
-  Oversec Help
+  Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
+  <!--
       <a href="/de/"><img src="/static/flags/DE.png"></a>
+  -->
       <a href="/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
-<div class="w3-container" style="margin-top:75px">
+<div class="w3-container" style="margin-top:30px">
     
-  <h2>Welcome to Oversec Help!</h2>
-  <p>TODO whatever.</p>
-<p>Before you can start using Oversec, you need to enable it in the Android settings.</p>
-<p><a href="/setup">Click here for more info</a></p>
-<p>TODO: include full sitempap</p>
+  
+  <h2>Welcome</h2>
+  <p><strong>Before you can start using Oversec, you need to enable it in the Android settings.</strong>
+<a href="/setup">Click here for more info</a></p>
+<p>Please look around in this help document by using the sitemap below or the navigation menu &#9776;</p>
+
+
+  <h4>Sitemap:</h4>
+
+
+<ul class="sitemap">
+  
+  <li><a href="/">Welcome</a>
+    
+      <ul>
+  <li><a href="/encoding/">Encoding</a>
+    
+  </li>
+  
+  <li><a href="/buttons/">Buttons</a>
+    
+  </li>
+  
+  <li><a href="/encrypting-images/">Encrypting Images</a>
+    
+  </li>
+  
+  <li><a href="/contact/">Contact</a>
+    
+  </li>
+  
+  <li><a href="/encryption-parameters/">Encryption Parameters</a>
+    
+      <ul>
+  <li><a href="/encryption-parameters/symmetric-keys/">Symmetric Keys</a>
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+  <li><a href="/setup/">Setup</a>
+    
+      <ul>
+  <li><a href="/setup/common-settings/">Common Settings</a>
+    
+  </li>
+  
+  <li><a href="/setup/per-app-config/">Per-App Configuration</a>
+    
+      <ul>
+  <li><a href="/setup/per-app-config/org-telegram-messenger/">Telegram</a>
+    
+  </li>
+  
+  <li><a href="/setup/per-app-config/org-thoughtcrime-securesms/">Signal</a>
+    
+  </li>
+  
+  <li><a href="/setup/per-app-config/com-google-android-talk/">Hangouts</a>
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+  <li><a href="/setup/decoy/">Decoy Content</a>
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+  <li><a href="/panic/">Panic</a>
+    
+  </li>
+  
+  <li><a href="/faq/">FAQ</a>
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+</ul>
 
 
 </div>

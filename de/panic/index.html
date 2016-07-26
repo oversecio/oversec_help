@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/static/style.css">
 
 
-  <title>Panic — Oversec Help</title>
+  <title>Panic — Oversec Online Help</title>
 
      <script>
 
@@ -44,7 +44,7 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome to Oversec Help!</h5></a>
+  <a class="menuentry" href="/"><h5>Welcome</h5></a>
     
       <div class="menuindent">
   <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
@@ -100,16 +100,6 @@ function w3_close() {
       <div class="menuindent">
   <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
     
-      <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-details/"><h5>Key Details</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-create/"><h5>Create Key</h5></a>
-    
-  
-  </div>
-    
   
   </div>
     
@@ -135,22 +125,34 @@ function w3_close() {
 
   <span class="headline">
   <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
-  Oversec Help
+  Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
+  <!--
       <a href="/de/panic/"><img src="/static/flags/DE.png"></a>
+  -->
       <a href="/panic/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
-<div class="w3-container" style="margin-top:75px">
+<div class="w3-container" style="margin-top:30px">
     
   <h2>Panic</h2>
-  <p>TODO: describe panic mode
-Link to Long-Tap Hide BUtton
-Link to Notification</p>
-<p>see also  <a href="/buttons#button_hide">HideButton</a></p>
-<p>To reenable Oversec after the Panic-Button has been pressed, go to the main Oversec screen and tap on "Reactivate"</p>
+  <p>Activating Panic-Mode will <em>immediately</em></p>
+<ul>
+<li>forget all entered passwords for "simple" encryption</li>
+<li>close all unlocked symmetric keys </li>
+<li>close all cached keys in OpenKeyChain</li>
+<li>remove all Oversec overlays, buttons and notifications.</li>
+<li>force-stop Oversec</li>
+</ul>
+<p>so that no indication of anything "secret" will be left on the device (Of course an investigator will still see that the Oversec app is installed on the device)</p>
+<p>Panic-Mode can be activated by</p>
+<ul>
+<li>Long-tapping the <a href="/buttons#button_hide">Hide Button</a></li>
+<li>Tapping "STOP" in the Oversec notification</li>
+</ul>
+<p>To re-enable Oversec after Panic-Mode has been entered, go to the main Oversec app and tap on "Reactivate"</p>
 
 
 </div>

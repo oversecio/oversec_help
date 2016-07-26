@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/static/style.css">
 
 
-  <title>Encrypting Images — Oversec Help</title>
+  <title>Encrypting Images — Oversec Online Help</title>
 
      <script>
 
@@ -44,7 +44,7 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome to Oversec Help!</h5></a>
+  <a class="menuentry" href="/"><h5>Welcome</h5></a>
     
       <div class="menuindent">
   <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
@@ -100,16 +100,6 @@ function w3_close() {
       <div class="menuindent">
   <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
     
-      <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-details/"><h5>Key Details</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/key-create/"><h5>Create Key</h5></a>
-    
-  
-  </div>
-    
   
   </div>
     
@@ -135,19 +125,49 @@ function w3_close() {
 
   <span class="headline">
   <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
-  Oversec Help
+  Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
+  <!--
       <a href="/de/encrypting-images/"><img src="/static/flags/DE.png"></a>
+  -->
       <a href="/encrypting-images/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
-<div class="w3-container" style="margin-top:75px">
+<div class="w3-container" style="margin-top:30px">
     
   <h2>Encrypting Images</h2>
-  <p>TODO: describe sharing of images from gallery
-TODO: describe decrypting of (received) images</p>
+  <h3>Encrypting an existing image</h3>
+<p>To encrypt and send an existing image:</p>
+<ul>
+<li>In your Photos or Gallery app, open the picture</li>
+<li>Tap on "Share"</li>
+<li>Tap on "Encrypt Image"</li>
+<li>Next, tap on the app you want to send the encrypted image with</li>
+<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
+<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
+<li>Select chat / contact / recipient in the sender app.</li>
+</ul>
+<h3>Taking an encrypted photo</h3>
+<p>Oversec allows you to take a photo and send or store it as encrypted photo, without ever saving the plain photo to your device!</p>
+<p>To take an encrypted photo:</p>
+<ul>
+<li>Enable the <a href="/buttons#button_camera">Camera button</a> for the app</li>
+<li>Tap on the  <a href="/buttons#button_camera">Camera button</a> </li>
+<li>Take and confirm the photo</li>
+<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
+<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
+<li>Select chat / contact / recipient in the underlying app.</li>
+</ul>
+<h3>Decrypting an image</h3>
+<p>To decrypt and show the contents of an encrypted image:</p>
+<ul>
+<li>Open / view the encrypted image</li>
+<li>Tap on "Share" </li>
+<li>Tap on "Decrypt Image"</li>
+<li>Enter passphrase / unlock key</li>
+</ul>
 
 
 </div>
