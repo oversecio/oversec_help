@@ -43,44 +43,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +86,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,9 +131,7 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/buttons/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/buttons/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
@@ -142,48 +140,49 @@ function w3_close() {
     
   <h2>Buttons</h2>
   <p><a name="button_hide"></a></p>
-<h3>Hide-Button</h3>
-<div class="buttoncircle"><img  src="ic_clear_black_24dp.png"></img></div><p>Tap this button to temporarily hide all the Oversec overlay.</p>
-<p>Tapping on the same position again (while this and all other buttons are hidden) to un-hide!</p>
-<p>This button also functions as a panic button: Long-tap it to enter <a href="/panic">Panic Mode</a></p>
-<p>Double-tapping this button brings up the <a href="/setup/per-app-config/">per-app configuration page</a> where you can configure various aspects of how Oversec works in conjunction with the current app.</p>
-<p><em>Note: This button can be dragged and placed anywhere on the screen.</em></p>
+<h3>Verstecken Button</h3>
+<div class="buttoncircle"><img  src="ic_clear_black_24dp.png"></img></div><p>Berühre diesen Button um Oversec zeitweise zu verstecken.</p>
+<p>Wenn Du den Bildschirm an der gleichen Stelle nochmals berührst, wird Oversec wieder sichtbar!</p>
+<p>Dieser Button dient auch als Panik-Button: Berühre ihn <em>lang</em> um den <a href="/panic">Panik Modus</a> zu aktivieren.</p>
+<p>Doppelt-Berühren bring dich zur <a href="/setup/per-app-config/">App Konfiguration</a> wo du Oversec für die gerade aktive App konfigurieren kannst.</p>
+<p><em>Tipp: Dieser Button kann mittels Drag&amp;Drop überall auf dem Bildschirm positioniert werden.</em></p>
 <p><a name="button_encrypt"></a></p>
-<h3>Encrypt-Button</h3>
+<h3>Verschlüsseln Button</h3>
 <div class="buttoncircle"><img src="ic_lock_black_24dp.png"></img></div><p><a name="button_encrypt_initial"></a>
-Tap this button to encrypt the entered text. After the text has been encrypted, this button automatically disappears. So if you place this button over the underlying app's "send" or "save" button, you can make sure that you do not accidentally send or save plain text.</p>
+Berühre diesen Button um den gerade eingegebenen Text zu verschlüsseln. Nachdem der Text verschlüsselt wurde, verschwindet dieser Button automatisch. Wenn du also diesen Button direkt über den "Senden" Button der darunterliegenden App positionierst, stellst Du damit sicher dass nicht versehentlich unverschlüsselter Text versendet wird.</p>
 <p><a name="button_encrypt_encryptionparamsremembered"></a>
-If you have not encrypted anything yet in this app, tapping this button will bring up a screen to enter or modify the encryption params. Next time you tap this button, those params will be used and the encryption will happen instantly. 
-If you still want to change the encryption params, long-tap on this button to forcefully bring up the encryption-params screen.</p>
-<p><em>Hint: Double-tapping this button will hide it for a short time, so that the underlying app's buttons can be tapped.
-So if the Encrypt-BUtton is positioned right above the underlying app's send button, you can <em>triple</em> tap at this position to send an <em>unencrypted</em> message!</em></p>
-<p><em>Note: This button can be dragged and placed around the input field.</em></p>
+Nach dem ersten Berühren, gelangst Du mit diesem Button auf eine Seite, wo Du die Verschlüsselungseinstellungen angeben kannst.
+Beim nächsten Mal werden diese Einstellungen automatisch verwendet und die Verschlüsselung erfolgt sofort.
+Wenn Du die Einstellungen wieder ändern willst, berühre diesen Button <em>lang</em>, um die Seite mit den Verschlüsselungseinstellungen wieder anzuzeigen.</p>
+<p>*Tipp: Doppelt-Berühren versteckt den Button für eine kurze Zeit, so dass ein Button in der darunterliegenden App sichtbar wird.
+Wenn der Verschlüsseln-Button also direkt über dem "Senden" Button der darunterliegenden App positioniert ist, kannst Du durch <em>dreimal</em> Berühren eine unverschlüsselte Nachricht senden.</p>
+<p><em>Tipp: Dieser Button kann mittels Drag&amp;Drop in der Nähe des Eingabefelds positioniert werden.</em></p>
 <p><a name="button_decrypt"></a></p>
-<h3>Decrypt-/Clear Button</h3>
-<p>This button changes its icon and function depending on the text in the input field:</p>
-<div class="buttoncircle"><img src="ic_lock_open_black_24dp.png"></img></div><p>There is encrypted text in the input field. Tap this button to decrypt it and put the plain text back into the input field.</p>
-<p><em>Note: This functionality is not available on Android Kitkat for security reasons!</em></p>
-<div class="buttoncircle"><img  src="ic_backspace_black_24dp.png"></img></div><p>There is some text in the input field. Tapping this button clears all text.</p>
-<p><em>Note: This button can be dragged and placed around the input field.</em></p>
+<h3>Entschlüsseln-/Löschen Button</h3>
+<p>Das Icon auf diesem Button ändert sich, je nachdem welcher Text im Eingabefeld steht:</p>
+<div class="buttoncircle"><img src="ic_lock_open_black_24dp.png"></img></div><p>Es befindet sich verschlüsselter Text im Eingabefeld. Berühre diesen Button um den Text zu entschlüsseln.</p>
+<p><em>Hinweis: Diese Funktion ist aus Sicherheitsgründen nicht Android Kitkat verfügbar!</em></p>
+<div class="buttoncircle"><img  src="ic_backspace_black_24dp.png"></img></div><p>Es befindet sich unverschlüsselter Text im Eingabefeld. Berühre diesen Button um den Text komplett zu entfernen.</p>
+<p><em>Tipp: Dieser Button kann mittels Drag&amp;Drop in der Nähe des Eingabefelds positioniert werden.</em></p>
 <p><a name="button_info"></a></p>
-<h3>Info-Button</h3>
-<div class="buttoncircle"><img src="ic_info_outline_black_24dp.png"></img></div><p>Tap this button to enter info mode.</p>
-<p>While in info mode, there will be a smaller version of this button next to every encrypted text found on the screen. 
-Tap on of the small info button to show detailed encryption information about this text.</p>
-<div class="buttoncircle"><img  src="ic_not_interested_black_24dp.png"></img></div><p>While in info-mode, this button shows like above. Tap it to leave info mode.</p>
-<p><em>Note: This button can be dragged and placed anywhere on the screen.</em></p>
-<p>*Note: This button is not enabled by default. Click the config button to open the <a href="/setup/per-app-config/">per-app configuration page</a> where you can enable the info button.</p>
-<p>*Note: Long-tapping the Info-Button brings up the <a href="/setup/per-app-config/">per-app configuration page</a> (see below). You can thus enable the info button and disable the config button in the <a href="/setup/per-app-config/">per-app configuration page</a> and still have access to the app config by long-tapping the info button.</p>
+<h3>Info Button</h3>
+<div class="buttoncircle"><img src="ic_info_outline_black_24dp.png"></img></div><p>Berühre diesen Button um in den Info-Modus zu gelangen.</p>
+<p>Im Info-Modus wird neben jedem verschlüsseltem Text, der auf dem Bildschirm gefunden wird, ein kleiner Info-Button angezeigt.
+Berühre einen kleinen Info-Button um detaillierte Informationen zur Verschlüsselung anzuzeigen.</p>
+<div class="buttoncircle"><img  src="ic_not_interested_black_24dp.png"></img></div><p>Wenn im Info-Modus, wird der Button wie oben angezeigt. Berühre ihn um dem Info Modus wieder zu verlassen.</p>
+<p><em>Tipp: Dieser Button kann mittels Drag&amp;Drop überall auf dem Bildschirm positioniert werden.</em></p>
+<p>*Tipp: Dieser Button ist standardmäßig nicht sichtbar.Berühre den Konfiguration Button um die <a href="/setup/per-app-config/">App Konfigurations Seite</a> zu öffnen, wo Du dann den Info Button aktivieren kannst.</p>
+<p>*Tipp: Lang Berühren des Info Buttons bringt öffnet die <a href="/setup/per-app-config/">App Konfigurations Seite</a> (siehe unten). Du kannst also den Info Button aktivieren und den Konfiguration Button deaktivieren, und kannst trotzdem jederzeit die Konfiguration durch lang Berühren des Info Buttons öffnen.</p>
 <p><a name="button_config"></a></p>
-<h3>Config-Button</h3>
-<div class="buttoncircle"><img src="ic_settings_black_24dp.png"></img></div><p>Tapping this button brings up the <a href="/setup/per-app-config/">per-app configuration page</a> where you can configure various aspects of how Oversec works in conjunction with the current app.</p>
-<p><em>Note: This button can be dragged and placed anywhere on the screen.</em></p>
+<h3>Konfiguration Button</h3>
+<div class="buttoncircle"><img src="ic_settings_black_24dp.png"></img></div><p>Berühre diesen Button um die <a href="/setup/per-app-config/">App Konfigurations Seite</a> zu Öffnen, wo du Oversec für die gerade aktive App konfigurieren kannst.</p>
+<p><em>Tipp: Dieser Button kann mittels Drag&amp;Drop überall auf dem Bildschirm positioniert werden.</em></p>
 <p><a name="button_camera"></a></p>
-<h3>Camera-Button</h3>
-<div class="buttoncircle"><img src="ic_camera_alt_black_24dp.png"></img></div><p>By tapping this button you can take and end an encrypted photo.</p>
-<p>This button is only available for apps that support sending of images.
-You can choose if you want to see or hide this button in the  <a href="/setup/per-app-config/">per-app configuration page</a></p>
-<p><em>Note: This button can be dragged and placed anywhere on the screen.</em></p>
+<h3>Kamera Button</h3>
+<div class="buttoncircle"><img src="ic_camera_alt_black_24dp.png"></img></div><p>Mit diesem Button kannst du ein verschlüsseltes Foto aufnehmen.</p>
+<p>Dieser Button wird nur in Apps angezeigt, die das versenden von Bildern erlauben.
+Du kannst in der <a href="/setup/per-app-config/">App Konfigurations Seite</a> bestimmen, ob Du diesen Button sehen willst oder nicht.</p>
+<p><em>Tip: Dieser Button kann mittels Drag&amp;Drop überall auf dem Bildschirm positioniert werden.</em></p>
 
 
 </div>

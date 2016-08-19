@@ -15,7 +15,8 @@
      <script>
 
       function redirectpage(dest) {
-        
+      alert("Redirectpage: "+dest);
+
         if (window.location.pathname!=dest) {
           if (window.location.replace)
             window.location.replace(dest)
@@ -33,11 +34,6 @@
        
        var apps_root = '/setup/per-app-config';
        
-          if ('copy of com-google-android-talk'==package) {
-            redirectpage(lang+apps_root+'/copy of com-google-android-talk#'+version);
-            return;
-          }
-       
           if ('com-google-android-gm'==package) {
             redirectpage(lang+apps_root+'/com-google-android-gm#'+version);
             return;
@@ -50,6 +46,11 @@
        
           if ('org-thoughtcrime-securesms'==package) {
             redirectpage(lang+apps_root+'/org-thoughtcrime-securesms#'+version);
+            return;
+          }
+       
+          if ('com-google-android-talk'==package) {
+            redirectpage(lang+apps_root+'/com-google-android-talk#'+version);
             return;
           }
        
@@ -183,7 +184,7 @@
       }  
 
      function resolve(lang) {
-
+      alert("Resolve: "+lang);
           var hash =window.location.hash.substring(1);
           if (hash.startsWith('alias_')) {
             resolveAlias(lang,hash.substring(6));
@@ -192,7 +193,8 @@
             resolvePackage(lang,hash.substring(8));
           }
           else {
-              redirectpage(lang+'/index.html');
+              //alert("window.location.: "+window.location.pathname);
+                redirectpage(lang+'/index.html');
           }
      }
 
@@ -208,6 +210,9 @@
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
+    /*
+          alert("languageinfo: "+languageinfo);
+
 
     for (i=0;i<langcodes.length-1;i++){
       if (languageinfo.substr(0,2)==langcodes[i]) {
@@ -219,6 +224,7 @@
 
     if (gotodefault)
       resolve(langredirects[langcodes.length-1])
+    */
 
  
 
@@ -250,44 +256,44 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
-    
-      <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -297,29 +303,29 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/fr/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/fr/contact/"><h5>Contact</h5></a>
     
   
   </div>
@@ -338,9 +344,7 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
@@ -360,64 +364,64 @@ function w3_close() {
 <ul class="sitemap">
   
   <li>
-  <a  href="/"><h5>Welcome</h5></a>
+  <a  href="/fr/"><h5>Welcome</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/buttons/"><h5>Buttons</h5></a>
+  <a  href="/fr/buttons/"><h5>Buttons</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/panic/"><h5>Panic</h5></a>
+  <a  href="/fr/panic/"><h5>Panic</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/"><h5>Setup</h5></a>
+  <a  href="/fr/setup/"><h5>Setup</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/setup/common-settings/"><h5>Common Settings</h5></a>
+  <a  href="/fr/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/decoy/"><h5>Decoy Content</h5></a>
+  <a  href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+  <a  href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+  <a  href="/fr/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+  <a  href="/fr/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+  <a  href="/fr/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+  <a  href="/fr/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
 
     
   </li>
@@ -429,18 +433,18 @@ function w3_close() {
   </li>
   
   <li>
-  <a  href="/encoding/"><h5>Encoding</h5></a>
+  <a  href="/fr/encoding/"><h5>Encoding</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+  <a  href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+  <a  href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
 
     
   </li>
@@ -449,19 +453,19 @@ function w3_close() {
   </li>
   
   <li>
-  <a  href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+  <a  href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/faq/"><h5>FAQ</h5></a>
+  <a  href="/fr/faq/"><h5>FAQ</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/contact/"><h5>Contact</h5></a>
+  <a  href="/fr/contact/"><h5>Contact</h5></a>
 
     
   </li>

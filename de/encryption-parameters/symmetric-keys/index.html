@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Symmetric Keys — Oversec Online Help</title>
+  <title>Symmetrische Schlüssel — Oversec Online Help</title>
 
      <script>
 
@@ -43,44 +43,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +86,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,82 +131,81 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/encryption-parameters/symmetric-keys/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/encryption-parameters/symmetric-keys/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Symmetric Keys</h2>
-  <h4>Note: You don't need any symmetric key if you're using the "simple", password-based encryption or PGP encryption.</h4>
-<h2>Creating a Key</h2>
-<p>Tap on (+) to create a new key. Select one of the available key types:</p>
+  <h2>Symmetrische Schlüssel</h2>
+  <h4>Hinweis: Du benötigst keine symmetrische Schlüssel wenn du nur die einfache Verschlüsselung mit Passwörtern benutzt,</h4>
+<h2>Schlüssel erzeugen</h2>
+<p>Berühre den (+) Button um einen neuen Schlüssel zu erzeugen, wähle dann den Schlüsseltyp aus:</p>
 <p><a name="random"></a></p>
-<h3>Random Key</h3>
-<p>Creates a random 256-bit secret key.</p>
-<p>It is impossible to crack such key, but it will take some effort to securely share it with your remote party.</p>
-<p>Please wait a few seconds while Oversec creates the key, then enter an Alias or Name for the key and finally tap the "Save" button.</p>
+<h3>Zufälliger Schlüssel</h3>
+<p>Erzeugt einen zufälligen 256 Bit Schlüssel.</p>
+<p>Er ist unmöglich solch einen Schlüssel zu knacken, aber dafür ist es etas aufwändiger, den Schlüssel auf sicherem Wege mit deinen Kontakten auszutauschen.</p>
+<p>Bitte warte ein paar Sekunden während Oversec den Schlüssel erzeugt. Gib dann den Alias-Namen für den Schlüssel ein und berühre den Speichern Button.</p>
 <p><a name="pbkdf"></a></p>
-<h3>Password-based Key</h3>
-<p>Creates a key based on a passphrase.</p>
-<p>This is less secure, but you only need to agree on a passphrase, so the other party can generate a matching key.</p>
-<p>Note that this is still safer than using the "simple" passphrase  based encryption mode, as Oversec will require a lot of computing power to derive a 256 bit symmetric key from the passphrase.</p>
-<p>Please enter a secure and long passphrase or tap on "Suggest Strong Password" to let Oversec generate a secure passphrase for you.
-Then repeat-type the password to make sure you have remembered it. Then tap "continue"</p>
-<p>Please wait a few seconds while Oversec calculates a key based on the passphrase, then enter an Alias or Name for the key and finally tap the "Save" button.</p>
+<h3>Passwortbasierter Schlüssel</h3>
+<p>Erzeugt einen Schlüssel auf Basis eines Passworts.</p>
+<p>Dieser Schlüsseltyp ist weniger sicher, aber es ist einfacher, das Passwort z.B. per Telefon auszutauschen.</p>
+<p>Dies ist allerdings trotzdem sicherer als die "einfache" Verschlüsselung nur mit Passwörtern, denn Oversec verlangt ein grosses Mass an Rechenpower um einen 256 Bit Schlüssel aus dem Passwort zu erzeugen.</p>
+<p>Bitte gib eine sicheres, langes Passwort ein oder Berühre "Sicheres Passwort Vorschlagen".
+Wiederhole dann das Passwort, um sicherzustellen, dass du es korrekt erinnerst. Berühre dann "Weiter".</p>
+<p>Bitte warte ein paar Sekunden bis Oversec den Schlüssel aus dem Passwort erzeugt hat.  Gib dann den Alias-Namen für den Schlüssel ein und berühre den Speichern Button.</p>
 <p><a name="scan"></a></p>
-<h2>Sharing / Importing a Key</h2>
-<p>The best way to import a key is to directly scan it from the other phone via QR-Code:</p>
+<h2>Schlüssel Teilen oder Importieren</h2>
+<p>Der einfachste Wege, einen Schlüssel zu importieren, ist es, direkt den Oversec QR-Code vom Handy deines Kontakts zu scannen.</p>
 <h4>Alice</h4>
 <ul>
-<li>Open the key you want to share</li>
-<li>tap on "reveal" to show the full QR-Code</li>
-<li>(you may have to enter the key password to do this)</li>
+<li>Öffne den Schlüssel den Du Teilen willst.</li>
+<li>Berühre "Anzeigen um den komplette QR-Code anzuzeigen.</li>
+<li>(Evtl. musst du das Schlüssel-Passwort angeben.)</li>
 </ul>
 <h4>Bob</h4>
 <ul>
-<li>Tap on (+) to create a new key, then select "QR-Code"</li>
-<li>Scan the QR-Code from Alice's phone.</li>
-<li>Enter an Alias for the key and finally tap the "Save" button.</li>
+<li>Berühre (+) um einen neuen Schlüssel anzulegen, wähle dann "QR-Code".</li>
+<li>Scanne den QR-Code von Alice's Handy.</li>
+<li>Gib dann den Alias-Namen für den Schlüssel ein und berühre den Speichern Button.</li>
 </ul>
-<h3>If you have received an image of the QR-Code some other way:</h3>
+<h3>Wenn du ein Bild des QR-Codes z.B. per E-Mail oder Chat erhalten hast.</h3>
 <ul>
-<li>Open the image</li>
-<li>Tap "Share"</li>
-<li>Select (Oversec) "Import Key"</li>
-<li>Enter the passphrase that protects the key</li>
-<li>Enter an Alias for the key and finally tap the "Save" button.</li>
-<li><em>Make sure to verify and confirm this key</em> (see below)</li>
+<li>Öffne das Bild und zeige es an.</li>
+<li>Wähle "Teilen".</li>
+<li>Wähle "Schlüssel importieren" (Oversec Icon)</li>
+<li>Gib' das Passwort ein, das den Schlüssel schützt. (Frage den Absender!) </li>
+<li>Gib dann den Alias-Namen für den Schlüssel ein und berühre den Speichern Button.</li>
+<li>*Du solltest nun den Schlüssel überprüfen und bestätigen (siehe unten).</li>
 </ul>
-<h2>Sharing</h2>
-<p>To share a key on an insecure channel (i.e. email)</p>
+<h2>Teilen</h2>
+<p>Um einen Schlüssel über eine unsichere Verbindung (z.B. unverschlüsselte E-Mail) zu teilen:</p>
 <ul>
-<li>Open the key details</li>
-<li>Tap on "Menu" and select "Send encrypted"</li>
-<li>You may first need to unlock the key</li>
-<li>Enter and repeat a sharing password to protected the key. </li>
-<li>The person who received this key will need to know this password in order to import the key.</li>
-<li>Select the app to share the key with.</li>
+<li>Öffne den Schlüssel und zeige ihn an.</li>
+<li>Berühre das Menü und wähle "verschlüsselt senden"</li>
+<li>Eventuell musst du den Schlüssel zuerst entsperren.</li>
+<li>Gib' ein Passwort ein, das den Schlüssel schützt. </li>
+<li>Die Person, die den Schlüssel empfängt, benötigt dieses Passwort um den Schlüssel zu importieren.</li>
+<li>Wähle die App aus, mit der Du den Schlüssel versenden willst.</li>
 </ul>
 <h2>Backup</h2>
-<p>To back up your keys by e.g. printing the out on a piece of paper or storing them on removable media:</p>
+<p>Du kannst ein Backup eines Schlüssels erstellen indem du ihn ausdruckst oder auf einer SD-Karte speicherst:</p>
 <ul>
-<li>Open the key details</li>
-<li>Tap on "Menu" and select "View/print encrypted"</li>
-<li>You may first need to unlock the key</li>
-<li>Enter and repeat a sharing password to protected the key. </li>
-<li>You will need to remember this password to restore / import those keys at a later time!</li>
-<li>Select the app to view / print / save the key with.</li>
+<li>Öffne den Schlüssel und zeige ihn an.</li>
+<li>Berühre das Menü und wähle "verschlüsselt anzeigen/drucken"</li>
+<li>Eventuell musst du den Schlüssel zuerst entsperren.</li>
+<li>Gib' ein Passwort ein, das den Schlüssel schützt. </li>
+<li>Du benötigst dieses Passwort, um später den Schlüssel wieder importieren zu können.</li>
+<li>Wähle die App aus, mit der Du den Schlüssel drucken oder speichern willst.</li>
 </ul>
 <p><a name="details"></a></p>
-<h2>Confirming Keys</h2>
-<p>When importing keys from another source, they will be marked as "unconfirmed". 
-This is because keys can possibly be tampered with before you get to import them.</p>
-<p>You need to contact the person you got the key from via a secure channel (phonecall?) and compare the key fingerprints.
-To start this process, open the key and tap the (&#10003;) button</p>
+<h2>Schlüssel bestätigen</h2>
+<p>Wenn du Schlüssel von woanders importierst, werden diese zuerst als "unbestätigt" markiert,
+weil du nicht sicher sein kannst, dass der Schlüssel unterwegs geändert wurde.</p>
+<p>Du musst die Person, die dir den Schlüssel gesendet hat, über eine sichere Verbindung (z.B. Telefonanruf) kontaktieren, und dann
+die Fingerabdrücke der Schlüssel vergleichen.
+Öffne dazu den Schlüssel und berühre den (&#10003;) Button.</p>
 
 
 </div>

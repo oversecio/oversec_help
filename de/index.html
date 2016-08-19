@@ -10,10 +10,223 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Willommen zur Oversec Hilfe — Oversec Online Help</title>
+  <title>Willkommen — Oversec Online Help</title>
 
      <script>
 
+      function redirectpage(dest) {
+      alert("Redirectpage: "+dest);
+
+        if (window.location.pathname!=dest) {
+          if (window.location.replace)
+            window.location.replace(dest)
+          else
+            window.location=dest
+        }
+      }
+
+
+      function resolvePackage(lang,packageAndVersion) {
+        var sp = packageAndVersion.split('$');
+        var package = sp[0];
+        var version = sp[1];
+
+       
+       var apps_root = '/setup/per-app-config';
+       
+          if ('com-google-android-gm'==package) {
+            redirectpage(lang+apps_root+'/com-google-android-gm#'+version);
+            return;
+          }
+       
+          if ('org-telegram-messenger'==package) {
+            redirectpage(lang+apps_root+'/org-telegram-messenger#'+version);
+            return;
+          }
+       
+          if ('org-thoughtcrime-securesms'==package) {
+            redirectpage(lang+apps_root+'/org-thoughtcrime-securesms#'+version);
+            return;
+          }
+       
+          if ('com-google-android-talk'==package) {
+            redirectpage(lang+apps_root+'/com-google-android-talk#'+version);
+            return;
+          }
+       
+
+        redirectpage(lang+apps_root+'/nothing-special-known-about-this-app');
+      }  
+
+      function resolveAlias(lang,xalias) {
+        
+          if ('encparams_pgp'==xalias) {
+            redirectpage(lang+'/encryption-parameters/#pgp');
+            return;
+          }
+        
+          if ('encparams_simple'==xalias) {
+            redirectpage(lang+'/encryption-parameters/#simple');
+            return;
+          }
+        
+          if ('encparams_sym'==xalias) {
+            redirectpage(lang+'/encryption-parameters/#sym');
+            return;
+          }
+        
+          if ('encparams_fab'==xalias) {
+            redirectpage(lang+'/encryption-parameters/#fab');
+            return;
+          }
+        
+          if ('main_help'==xalias) {
+            redirectpage(lang+'/setup/#main_help');
+            return;
+          }
+        
+          if ('main_help_acsconfig'==xalias) {
+            redirectpage(lang+'/setup/#main_help_acsconfig');
+            return;
+          }
+        
+          if ('main_apps'==xalias) {
+            redirectpage(lang+'/setup/#main_apps');
+            return;
+          }
+        
+          if ('main_settings'==xalias) {
+            redirectpage(lang+'/setup/#main_settings');
+            return;
+          }
+        
+          if ('main_keys'==xalias) {
+            redirectpage(lang+'/encryption-parameters/symmetric-keys');
+            return;
+          }
+        
+          if ('main_padders'==xalias) {
+            redirectpage(lang+'/setup/decoy');
+            return;
+          }
+        
+          if ('symkey_create_pbkdf'==xalias) {
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#pbkdf');
+            return;
+          }
+        
+          if ('symkey_create_random'==xalias) {
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#random');
+            return;
+          }
+        
+          if ('symkey_create_scan'==xalias) {
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#scan');
+            return;
+          }
+        
+          if ('symkey_details'==xalias) {
+            redirectpage(lang+'/encryption-parameters/symmetric-keys#details');
+            return;
+          }
+        
+          if ('appconfig_main'==xalias) {
+            redirectpage(lang+'/setup/per-app-config/#main');
+            return;
+          }
+        
+          if ('appconfig_appearance'==xalias) {
+            redirectpage(lang+'/setup/per-app-config/#appearance');
+            return;
+          }
+        
+          if ('appconfig_lab'==xalias) {
+            redirectpage(lang+'/setup/per-app-config/#lab');
+            return;
+          }
+        
+          if ('button_hide_visible'==xalias) {
+            redirectpage(lang+'/buttons/#button_hide_visible');
+            return;
+          }
+        
+          if ('button_hide_hidden'==xalias) {
+            redirectpage(lang+'/buttons/#button_hide_hidden');
+            return;
+          }
+        
+          if ('button_encrypt_initial'==xalias) {
+            redirectpage(lang+'/buttons/#button_encrypt_initial');
+            return;
+          }
+        
+          if ('button_encrypt_encryptionparamsremembered'==xalias) {
+            redirectpage(lang+'/buttons/#button_encrypt_encryptionparamsremembered');
+            return;
+          }
+        
+          if ('input_insufficientpadding'==xalias) {
+            redirectpage(lang+'/encoding/#insufficientpadding');
+            return;
+          }
+        
+          if ('input_corruptedencoding'==xalias) {
+            redirectpage(lang+'/encoding/#corrupted');
+            return;
+          }
+        
+          if ('bossmode_active'==xalias) {
+            redirectpage(lang+'/panic');
+            return;
+          }
+        
+        redirectpage(lang+'/index.html');
+      }  
+
+     function resolve(lang) {
+      alert("Resolve: "+lang);
+          var hash =window.location.hash.substring(1);
+          if (hash.startsWith('alias_')) {
+            resolveAlias(lang,hash.substring(6));
+          } 
+          else if (hash.startsWith('package_')) {
+            resolvePackage(lang,hash.substring(8));
+          }
+          else {
+              //alert("window.location.: "+window.location.pathname);
+                redirectpage(lang+'/index.html');
+          }
+     }
+
+    /*
+    Browser Language Redirect script- By JavaScript Kit
+    For this and over 400+ free scripts, visit http://www.javascriptkit.com
+    This notice must stay intact
+    */
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes=new Array("en", "de", "default")
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects=new Array("", "de", "")
+    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+    var gotodefault=1
+    
+    /*
+          alert("languageinfo: "+languageinfo);
+
+
+    for (i=0;i<langcodes.length-1;i++){
+      if (languageinfo.substr(0,2)==langcodes[i]) {
+        resolve(langredirects[i])
+        gotodefault=0
+        break
+      }
+    }
+
+    if (gotodefault)
+      resolve(langredirects[langcodes.length-1])
+    */
+
+ 
 
 
 function w3_open() {
@@ -43,44 +256,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +299,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,9 +344,7 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
@@ -141,9 +352,10 @@ function w3_close() {
 <div class="w3-container" style="margin-top:30px">
     
   
-  <h2>Willommen zur Oversec Hilfe</h2>
-  <p>This is a basic demo website that shows how to use Lektor for a basic
-website with some pages.</p>
+  <h2>Willkommen</h2>
+  <p><strong>Bevor du Oversec benutzen kannst, musst du es in den Android Einstellungen aktivieren.</strong>
+<a href="/setup">Anleitung</a></p>
+<p>Du kannst diese Hilfe mittels der Sitemap unten oder mit dem Navigationsmenu &#9776; bedienen!</p>
 
 
   <h4>Sitemap:</h4>
@@ -152,64 +364,58 @@ website with some pages.</p>
 <ul class="sitemap">
   
   <li>
-  <a  href="/"><h5>Welcome</h5></a>
+  <a  href="/de/"><h5>Willkommen</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/buttons/"><h5>Buttons</h5></a>
+  <a  href="/de/buttons/"><h5>Buttons</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/panic/"><h5>Panic</h5></a>
-
-    
-  </li>
-  
-  <li>
-  <a  href="/setup/"><h5>Setup</h5></a>
+  <a  href="/de/setup/"><h5>Einrichtung</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/setup/common-settings/"><h5>Common Settings</h5></a>
+  <a  href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/decoy/"><h5>Decoy Content</h5></a>
+  <a  href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+  <a  href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+  <a  href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+  <a  href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+  <a  href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+  <a  href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
 
     
   </li>
@@ -221,18 +427,24 @@ website with some pages.</p>
   </li>
   
   <li>
-  <a  href="/encoding/"><h5>Encoding</h5></a>
+  <a  href="/de/panic/"><h5>Panik Modus</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+  <a  href="/de/encoding/"><h5>Kodierung</h5></a>
+
+    
+  </li>
+  
+  <li>
+  <a  href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
 
     
       <ul>
   <li>
-  <a  href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+  <a  href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
 
     
   </li>
@@ -241,19 +453,19 @@ website with some pages.</p>
   </li>
   
   <li>
-  <a  href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+  <a  href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/faq/"><h5>FAQ</h5></a>
+  <a  href="/de/faq/"><h5>FAQ</h5></a>
 
     
   </li>
   
   <li>
-  <a  href="/contact/"><h5>Contact</h5></a>
+  <a  href="/de/contact/"><h5>Kontakt</h5></a>
 
     
   </li>

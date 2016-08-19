@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Setup — Oversec Online Help</title>
+  <title>Einrichtung — Oversec Online Help</title>
 
      <script>
 
@@ -43,44 +43,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +86,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,55 +131,54 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/setup/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/setup/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Setup</h2>
+  <h2>Einrichtung</h2>
   <p><a name="main_help"></a>
 <a name="main_help_acsconfig"></a></p>
-<h3>Required Setup</h3>
-<p>The basic operating principle of Oversec is that it constantly monitors the screen for encrypted text.</p>
-<p>To be able to read the screen contents, it has to be enabled as a so called "Accessibility Service".</p>
-<p>So as the first step, before you can use Oversec, you need to enable Oversec as an Accessibility Service in Androids "Accessibility Settings".</p>
-<p>Tapping on "Configure" will lead you directly to the relevant Settings page:</p>
-<p>Now tap on "Oversec"
+<h3>Nötige Schritte</h3>
+<p>Das Funktionsprinzip von Oversec ist, ständig den Bildschirminhalt auf verschlüsselte Nachrichten zu untersuchen.</p>
+<p>Damit Oversec den Bildschirm auslesen kann, muss es als sog. "Bedienungshilfe" aktiviert werden.</p>
+<p>Also muss Oversec zuerst, bevor du es benutzen kannst, in den "Bedienungshilfen" Einstellung in Android aktiviert werden.</p>
+<p>Wenn du "Konfigurieren" berührst, kommst du direkt zu den Einstellungen:</p>
+<p>Berühre jetzt "Oversec"
 <br></br>
 <img src="acs_settings_step_1_L.png"></img>
 <br></br>
-Now tap on the switch in the upper right corner
+Berühre jetzt den Schalter in der oberen rechten Ecke.
 <br></br>
 <img src="acs_settings_step_2_L.png"></img>
 <br></br>
-Tap on "OK"
+Berühre "OK"
 <br></br>
 <img src="acs_settings_step_3_L.png"></img>
 <br></br>
-Now the switch should be ON. Tap on "BACK"
+Der Schalter sollte nun "An" sein. Drücke die "zurück" Taste.
 <br></br>
 <img src="acs_settings_step_4_L.png"></img>
 <br></br>
-Now Oversec should be "on". Tap on "BACK"
+Oversec sollte nun "An" sein. Drücke nochmals die "zurück" Taste.
 <br></br>
 <img src="acs_settings_step_5_L.png"></img>
 <br></br></p>
-<h3><a name="main_apps"></a>Configure Apps for Oversec</h3>
-<p>This is the list of all apps you currently have installed.</p>
-<p>The Oversec buttons and overlays will only show on top of apps that are checked here.
-Please review the list and check all apps that you want to work with Oversec.</p>
-<p><em>Note: Tap on the questionmark icon on any app to show additional, Oversec-related information for this app.</em></p>
-<p><em>Note: You can also deactivate an app for Oversec after pressing the Oversec Config-Button while the app is shown.</em></p>
-<h3>Symmetric Keys</h3>
-<p>See <a href="/encryption-parameters/symmetric-keys">Symmetric Keys</a></p>
-<h3><a name="main_settings"></a>General Settings</h3>
-<h4>Allow Screenshots</h4>
-<p>By default, Oversec prevents the system from taking screenshots while showing sensitive information. Depending on the way the screenshots are made, taking screenshots either fails or produces a blank or black image.</p>
-<p>You can disable this behavior temporarily if you want to take screenshots to show or tell about Oversec, but we strongly recommend to keep this setting OFF!</p>
+<h3><a name="main_apps"></a>Apps für Oversec konfigurieren</h3>
+<p>Dies ist die Liste aller Apps, die auf deinem Handy installiert sind.</p>
+<p>Oversec wird nur über solchen Apps angezeigt, die in dieser Liste markiert sind.
+Bitte überprüfe die Markierungen in dieser Liste und markiere alle Apps, mit denen
+du Oversec benutzen willst.</p>
+<p><em>Tipp: Berühre das Fragezeichen neben einer App, um Oversec-spezifische Informationen zu dieser App anzuzeigen.</em></p>
+<p>*Tipp: Du kannst eine App auch für Oversec deaktivieren, indem du in der App den Oversec Konfigurations Button berührst.</p>
+<h3>Symmetrische Schlüssel</h3>
+<p>Siehe <a href="/encryption-parameters/symmetric-keys">Symmetrische Schlüssel</a></p>
+<h3><a name="main_settings"></a>Allgemeine Einstellungen</h3>
+<h4>Screenshot erlauben</h4>
+<p>Standardmässig verhindert Oversec, dass Screenshots gemacht werden während potentiell private (entschlüsselte) Texte und Schlüssel angezeigt werden. Entweder funktioneren die Screenshots überhaupt nicht, oder sie sind komplett schwarz.</p>
+<p>Du kannst diesen Schutz (zeitweise) ausschalten, wenn du z.B. Screenshots erstellen möchtest, um über Oversec zu berichten. Bitte vergesse nicht, die Funktion danach wieder einzuschalten.</p>
 
 
 </div>

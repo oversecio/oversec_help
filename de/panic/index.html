@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Panic — Oversec Online Help</title>
+  <title>Panik Modus — Oversec Online Help</title>
 
      <script>
 
@@ -43,44 +43,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +86,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,31 +131,30 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/panic/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/panic/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Panic</h2>
-  <p>Activating Panic-Mode will <em>immediately</em></p>
+  <h2>Panik Modus</h2>
+  <p>Aktiveren des Panik-Modus bewirkt sofort:</p>
 <ul>
-<li>forget all entered passwords for "simple" encryption</li>
-<li>close all unlocked symmetric keys </li>
-<li>close all cached keys in OpenKeyChain</li>
-<li>remove all Oversec overlays, buttons and notifications.</li>
-<li>force-stop Oversec</li>
+<li>Alle Passwörter für die "einfache" Verschlüsselung werden gelöscht.</li>
+<li>Alle symmetrischen Schlüssel werden gesperrt.</li>
+<li>Alle in OpenKeychain geöffneten Schlüssel werden gesperrt.</li>
+<li>Die Oversec-Überlagerung wird entfernt.</li>
+<li>Oversec wird komplett angehalten.</li>
 </ul>
-<p>so that no indication of anything "secret" will be left on the device (Of course an investigator will still see that the Oversec app is installed on the device)</p>
-<p>Panic-Mode can be activated by</p>
+<p>Im Panik-Modus ist keinerlei Hinweis auf irgendetwas "geheimes" erkennbar! 
+(Allerdings kann man in der Liste der installierten Apps sehen, dass Oversec installiert ist.)</p>
+<p>Der Panik-Modus wird aktiviert durch:</p>
 <ul>
-<li>Long-tapping the <a href="/buttons#button_hide">Hide Button</a></li>
-<li>Tapping "STOP" in the Oversec notification</li>
+<li>Lang Berühren des <a href="/buttons#button_hide">Verstecken Button</a>.</li>
+<li>Berühren von "STOP" in der Oversec Benachrichtigung.</li>
 </ul>
-<p>To re-enable Oversec after Panic-Mode has been entered, go to the main Oversec app and tap on "Reactivate"</p>
+<p>Um Oversec nach einer Panik wieder zu reaktivieren, gehe in die eigentliche Oversec App und berühre "reaktivieren".</p>
 
 
 </div>

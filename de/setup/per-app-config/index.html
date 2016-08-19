@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Per-App Configuration — Oversec Online Help</title>
+  <title>App-Konfiguration — Oversec Online Help</title>
 
      <script>
 
@@ -43,44 +43,40 @@ function w3_close() {
 
 <div >
   
-  <a class="menuentry" href="/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/de/"><h5>Willkommen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/de/buttons/"><h5>Buttons</h5></a>
     
   
   
-  <a class="menuentry" href="/panic/"><h5>Panic</h5></a>
-    
-  
-  
-  <a class="menuentry" href="/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/de/setup/"><h5>Einrichtung</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/common-settings/"><h5>Common Settings</h5></a>
+    <a class="menuentry" href="/de/setup/common-settings/"><h5>Allgemeine Einstellungen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/de/setup/decoy/"><h5>Tarntext-Vorlagen</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/"><h5>App-Konfiguration</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/copy of com-google-android-talk/"><h5>Hangouts</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
     
   
   
-  <a class="menuentry" href="/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    <a class="menuentry" href="/de/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
     
   
   </div>
@@ -90,29 +86,33 @@ function w3_close() {
     
   
   
-  <a class="menuentry" href="/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/de/panic/"><h5>Panik Modus</h5></a>
     
   
   
-  <a class="menuentry" href="/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/de/encoding/"><h5>Kodierung</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
     
       <div class="menuindent">
-  <a class="menuentry" href="/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
     
   
   </div>
     
   
   
-  <a class="menuentry" href="/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/de/encrypting-images/"><h5>Bilder Verschlüsseln</h5></a>
     
   
   
-  <a class="menuentry" href="/faq/"><h5>FAQ</h5></a>
+    <a class="menuentry" href="/de/faq/"><h5>FAQ</h5></a>
     
   
   
-  <a class="menuentry" href="/contact/"><h5>Contact</h5></a>
+    <a class="menuentry" href="/de/contact/"><h5>Kontakt</h5></a>
     
   
   </div>
@@ -131,9 +131,7 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-  <!--
       <a href="/de/setup/per-app-config/"><img src="/static/flags/DE.png"></a>
-  -->
       <a href="/setup/per-app-config/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
@@ -147,10 +145,6 @@ function w3_close() {
 
        
           <li>
-          <a  href="/de/setup/per-app-config/copy of com-google-android-talk/">Hangouts</a>
-          </li>
-       
-          <li>
           <a  href="/de/setup/per-app-config/com-google-android-gm/">GMail</a>
           </li>
        
@@ -162,70 +156,39 @@ function w3_close() {
           <a  href="/de/setup/per-app-config/org-thoughtcrime-securesms/">Signal</a>
           </li>
        
+          <li>
+          <a  href="/de/setup/per-app-config/com-google-android-talk/">Hangouts</a>
+          </li>
+       
   </ul>
- <h2>Per-App Configuration</h2>
+ <h2>App-Konfiguration</h2>
   <p><div class="buttoncircle"><img src="ic_settings_black_24dp.png"/></div>
-Note This configuration page can also be  opened by tapping the Oversec config button from within any oversec-enabled app.</p>
+Tipp: Die Konfigurations-Seite kanna uauch durch Berühren des <a href="/buttons#button_config">Oversec Konfigurations Buttons</a> innerhalb der App geöffnet werden.</p>
 <p><a name="main"></a></p>
-<h2>Options</h2>
-<p>General options</p>
-<h4>Enable Oversec</h4>
-<p>Oversec will only show itself on top of apps that are enabled here.</p>
-<h4>Config Button</h4>
-<p>Shows the [Config Button] (/buttons#button_config) that allows direct access to this config page.</p>
-<p>Once you're done with the basic configuration, you can safely disable this button - you can still access the app config through the notification bar or through the main oversec app.</p>
-<h4>Start hidden</h4>
-<p>When checked, Oversec will not initially be shown when entering an Oversec-enabled app. You will have to tap on the (invisible)  [Hide Button] (/buttons#button_hide) to show the Oversec screen overlay.</p>
-<h4>Hide Button</h4>
-<p>Shows the [Hide Button] (/buttons#button_hide) that allows to temporarily hide the Oversec screen overlay.</p>
-<p>Hint: This buttons also doubles as <a href="/panic">Panic Button</a>, so it's recommended to always keep this button enabled!</p>
-<h4>Decrypt/Clear Button</h4>
-<p>Shows the [Decrypt Button] (/buttons#button_decrypt) that allows to decrypt or clear the current input field.</p>
-<h4>Camera Button</h4>
-<p>Shows the [Camera Button] (/buttons#button_camera) that allows you do <a href="/encrypting-images">directly take and send encrypted photos</a></p>
+<h2>Optionen</h2>
+<p>Allgemeine Optionen</p>
+<h4>Oversec aktivieren</h4>
+<p>Oversec wird nur in Apps angezeigt, die híer aktiviert sind.</p>
+<h4>Konfigurations-Button</h4>
+<p>Zeigt den <a href="/buttons#button_config">Konfigurations-Button</a> an der dich Dich direkt zu diesr Seite bringt.    .</p>
+<p>Wenn du mit der Konfiguration fertig bist, kannst du diesen Button deaktivieren - du kannst trotzdem hederzeit die Koniguration über die Oversec Benachrictigung aufrufen.</p>
+<h4>Versteckt starten</h4>
+<p>Wenn aktiviert, wird Oversec nicht sofort angezeigt, wenn du zu einer App wechselst, die für Oversec aktiviert ist. Du musst dann zuerst den (unsichtbaren!) <a href="/buttons#button_hide">Verstecken Button</a> um Oversec wieder anzuzeigen</p>
+<h4>Verstecken Button</h4>
+<p>zeigt den [Verstecken Button] (/buttons#button_hide) an, mit dem du Oversec zeitweise verstekcen kannst.</p>
+<p>Tipp: Dieser Button dient auch als <a href="/panic">Panik Button</a>, er sollte deshalb immer aktiviert sein!</p>
+<h4>Entschlüsseln- / Löschen Button</h4>
+<p>Zeigt den [Entschlüsseln Button] (/buttons#button_decrypt) an mit dem Du das Eingabefeld entschlüsseln oder löschen kannst..</p>
+<h4>Kamera Button</h4>
+<p>Zeigt den[Kamera Button] (/buttons#button_camera) an mit dem Du <a href="/encrypting-images">direkt verschlüsselte Fotos</a> machen kannst.</p>
 <p><a name="appearance"></a></p>
-<h2>Appearance</h2>
-<p>Visual appearance</p>
-<p>Fine-Tune the visual appearance of the Oversec screen overlays - things like fonts, sizes, padding, colors, transparencies etc.</p>
+<h2>Optik</h2>
+<p>Optik Einstellungen</p>
+<p>Hier kannst du die Oversec Optik feintunen -  Schriftgrösse, Farben, Transparenz usw.</p>
 <p><a name="lab"></a></p>
 <h2>Lab</h2>
 <p>Extended and incubating options</p>
-<h4>Info Button</h4>
-<p>En-/Disables the [Info Button] (/buttons#button_info) to display additional encryption information.</p>
-<h4>Tap to show info</h4>
-<p>When enabled, tapping on an encrypted text will show detailed encryption info.</p>
-<p><strong>Warning: This might interfere with the UX of the underlying app, as it will not longer receive some tap events!</strong></p>
-<h4>Long-Tap to show info&lt;/string&gt;</h4>
-<p>When enabled, long-tapping on an encrypted text will show detailed encryption info.</p>
-<p><strong>Warning: This might interfere with the UX of the underlying app, as it will not longer receive some long-tap events!</strong></p>
-<h4>Encrypt Button</h4>
-<p>Show the [Encrypt Button] (/buttons#button_encrypt) next to the active input field.</p>
-<p>(Decrypt button also won't show if encrypt button is not shown)</p>
-<h4>Toggle encrypt button on long-tap</h4>
-<p>Shows or hides the  [Encrypt Button] (/buttons#button_encrypt)  when long-tapping on an input field.</p>
-<p><strong>Warning: This might interfere with the UX of the underlying app!</strong></p>
-<h4>Show input dialogs immediately</h4>
-<p>When a (password) input dialog is about to be shown in order to decrypt, show it immediately without asking the user first.</p>
-<h4>Notification</h4>
-<p>Show a permanent notification to control Oversec through the Android status bar.</p>
-<h4>Show decrypt overlay above input</h4>
-<p>Show the decrypted (plain) text right <em>above</em> an active input field, making it easier to manually review or edit the decoy text.</p>
-<h4>Expand decrypted text vertically</h4>
-<p>Allocates more vertical space for decrypted text if it doesn't fit into the space used by the encrypted text.</p>
-<p><strong>Warning: May obstruct parts of the underlying app.</strong></p>
-<h4>Keep Line Breaks</h4>
-<p>If plain text contains line breaks, put equal number of breaks into the decoy text.</p>
-<p><strong>Warning: Leaks some (meta) information about the plaintext.</strong></p>
-<h4>Add padding before encrypting</h4>
-<p>Add (at max) this number of random bytes before encrypting. This prevents an attacker from guessing the original message by the number of characters</p>
-<h4>Singleton encryption params</h4>
-<p>Stores only one set of encryption parameters per app. This is intended for notes keeping apps only, it should not be enabled for communication apps, where Oversec will try to keep distinct parameters per thread or conversation.</p>
-<h4>Always show encryption params</h4>
-<p>When enabled, Oversec will never automatically reuse previous encryption parameters, but always show the encryption parameters screen before encrypting.</p>
-<h4>High Quality Scraping</h4>
-<p>Performs more frequent and deeper screen reading. Produces a smoother UX at the cost of increased battery use.</p>
-<h4>Scrape All Views</h4>
-<p>Include views that are deemed as "Not Important". This is needed for a few apps only and it slows down Oversec and uses more battery!</p>
+<p>TODO: Pending german translation</p>
 
 
 </div>
