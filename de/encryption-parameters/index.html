@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Verschlüsselungseinstellungen — Oversec Online Help</title>
+  <title>Verschlüsselungs Einstellungen — Oversec Online Help</title>
 
      <script>
 
@@ -94,7 +94,7 @@ function w3_close() {
     
   
   
-    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungseinstellungen</h5></a>
+    <a class="menuentry" href="/de/encryption-parameters/"><h5>Verschlüsselungs Einstellungen</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/de/encryption-parameters/symmetric-keys/"><h5>Symmetrische Schlüssel</h5></a>
@@ -138,36 +138,38 @@ function w3_close() {
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Verschlüsselungseinstellungen</h2>
+  <h2>Verschlüsselungs Einstellungen</h2>
   <p><a name="simple"><br/></a></p>
-<h1>Simple</h1>
-<p>Encrypt by sharing a simple password only.</p>
-<p>This is a good way to try out Oversec, but it's possibly not very secure: An attacker can simply try out / guess the password, so make sure you use a very long and complicated password.</p>
-<h3>Adding Passwords</h3>
-<p>To encrypt or decrypt, you will first have to add another password by tapping "Add Password". Oversec will keep and remember a password until the time you specify when entering the password.</p>
-<p>Once a password has expired, it is completely gone. You will have to enter it again on this page!</p>
-<h3>Selecting Passwords</h3>
-<p>To encrypt with one or multiple passwords, simply tap on the checkbox next to each password. Oversec will encrypt the message for each of the selected passwords - anybody who knows at least one of the selected passwords will be able to decrypt the message.</p>
+<h1>Einfache Verschlüsselung mit Passwort</h1>
+<p>Verschlüsselung mit gemeinsamen Passwort.</p>
+<p>Einfach mit einem gemeinsamen Passwort verschlüsseln. Dies ist gut geeignet für Anfänger, bietet aber nur geringe Sicherheit.</p>
+<h3>Passwort hinzufügen</h3>
+<p>Zum verschlüsseln benötigtst Du mindestens ein Passwort, füge es hinzu indem du "Passwort hinzufügen" berührst. Oversec merkt sich das Passwort solange wie Du es bei der Passwort-Eingabe festlegst.</p>
+<p>Wenn ein Passwort abgelaufen ist, ist komplett weg. Du musst es dann neu eingeben.</p>
+<h3>Passwort auswählen</h3>
+<p>Um mit einem oder mehreren Passwörtern zu verschlüsseln, berühre die Box neben einem Passwort, um es zu markieren.
+Oversec verschlüsselt mit allen markierten Passwörtern - jeder, der mindestens eines der markierten Passwörter kennt, kann die Nachricht entschlüsseln.</p>
 <p><a name="sym"><br/></a></p>
-<h1>Symmetric</h1>
-<p>Encrypt by sharing a secure symmetric key</p>
-<p>This is a very safe way to encrypt, but you will have to share the encryption key through a safe channel - ideally by meeting in person and …<a href="/encryption-parameters/symmetric-keys/key-create">sharing the symmetric key via Camera and QR-Code</a>.</p>
-<h3>Adding keys</h3>
-<p>Please use the main Oversec app to <a href="/encryption-parameters/symmetric-keys/key-create">create and organize your symmetric keys</a>.</p>
-<h3>Selecting Keys</h3>
-<p>To encrypt with one or multiple keys, simply tap on the checkbox next to each key. Oversec will encrypt the message for each of the selected keys - anybody who has at least one of the selected keys will be able to decrypt the message.</p>
+<h1>Symmetrisch</h1>
+<p>Verschlüsselung mit gemeinsamen symmetrischen Schlüsseln.</p>
+<p>Verschlüsselung mit gemeinsamen Schlüssel. Der Schlüssel muss vorher mit der anderen Person ausgetauscht werden - am einfachsten indem du die Person triffst und den Schlüssel <a href="/encryption-parameters/symmetric-keys/key-create">mittels Kamera und QR-Code scannst</a>.</p>
+<h3>Schlüssel hinzufügen</h3>
+<p>Benutze die Oversec App um <a href="/encryption-parameters/symmetric-keys/key-create">symmetrische Schlüssel zu verwalten</a>.</p>
+<h3>Schlüssel auswählen</h3>
+<p>Um mit einem oder mehreren Schlüsseln zu verschlüsseln, berühre die Box neben einem Schlüssel, um ihn zu markieren.
+Oversec verschlüsselt mit allen markierten Schlüsseln - jeder, der mindestens eines der markierten Schlüssel hat, kann die Nachricht entschlüsseln.</p>
 <p><a name="pgp"><br/></a></p>
 <h2>PGP</h2>
-<p>Encrypt with PGP public/private keys. You need the <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeyChain App</a> to use this method and manage your PGP keys.
-<br/></p>
-<h4>Important: PGP encryption adds about 2 kilobytes or more of data to your encrypted message. Please consider this and depending on your data plan you might want to use symmetric encryption instead (which requires much less data).</h4>
-<h3>Own Key</h3>
-<p>If you haven't done so yet, select your own PGP key next to "myself". You need to do this if you want to be able to encrypt messages yourself or if you want to sign messages.</p>
-<h3>Signing a message</h3>
-<p>Check the "Sign Message" checkbox to sign the message with your own private key.</p>
-<h3>Recipients</h3>
-<p>Tap the (+) button to add recipients. This will open the OpenKeyChain app where you can select one or more public keys. (You can download / manage public keys in that app!)</p>
-<p>Oversec will encrypt the message with the public keys of each of the selected recipients and yourself - anybody who has a matching private key will be able to decrypt his message.</p>
+<p>Verschlüsselung mit öffentlichen PGP Schlüsseln. Du benötigst die <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeychain App</a> um mit PGP zu verschlüsseln und deine PGP Schlüssel zu verwalten.</p>
+<p><br/></p>
+<h4>Warnung: PGP verschlüsselte Nachrichten verbrauchen 3 Kilobyte oder mehr pro Nachricht. Bitte berücksichtige dies wenn Du wenig Datenvolumen haben, und benutze u.U. stattdessen symmetrische Verschlüsselung.</h4>
+<h3>Eigener Schlüssel</h3>
+<p>Wähle hier deinen eigenen, privaten PGP Schlüssel aus. Falls du das nicht tust, wirst du die verschlüsselten Nachrichten nicht mehr selbst entschlüsseln können.</p>
+<h3>Nachricht signieren</h3>
+<p>Wähle dies aus um Nachrichten auch zu signieren.</p>
+<h3>Empfänger</h3>
+<p>Berühre den (+) Button um Empfänger hinzuzufügen. Die OpenKeychain App wird dann geöffnet und du kannst die öffentlichen Schlüssel von einem oder mehreren Empfängern auswählen.
+Oversec verschlüsselt mit den öffentlichen Schlüsseln aller Empfänger - jeder, der einen passenden privaten Schlüssel hat, kann die Nachricht entschlüsseln.</p>
 
 
 </div>
