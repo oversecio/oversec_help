@@ -54,6 +54,11 @@
             return;
           }
        
+          if ('com-google-android-apps-inbox'==package) {
+            redirectpage(lang+apps_root+'/com-google-android-apps-inbox#'+version);
+            return;
+          }
+       
           if ('org-thoughtcrime-securesms'==package) {
             redirectpage(lang+apps_root+'/org-thoughtcrime-securesms#'+version);
             return;
@@ -315,6 +320,10 @@ function w3_close() {
     
   
   
+    <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
     <a class="menuentry" href="/fr/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
     
   
@@ -446,6 +455,12 @@ function w3_close() {
   
   <li>
   <a  href="/fr/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+
+    
+  </li>
+  
+  <li>
+  <a  href="/fr/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
 
     
   </li>
