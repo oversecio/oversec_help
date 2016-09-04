@@ -39,8 +39,18 @@
             return;
           }
        
+          if ('com-android-messaging'==package) {
+            redirectpage(lang+apps_root+'/com-android-messaging#'+version);
+            return;
+          }
+       
           if ('org-telegram-messenger'==package) {
             redirectpage(lang+apps_root+'/org-telegram-messenger#'+version);
+            return;
+          }
+       
+          if ('com-google-android-apps-messaging'==package) {
+            redirectpage(lang+apps_root+'/com-google-android-apps-messaging#'+version);
             return;
           }
        
@@ -293,7 +303,15 @@ function w3_close() {
     
   
   
+    <a class="menuentry" href="/de/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
     <a class="menuentry" href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/de/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
     
   
   
@@ -415,7 +433,19 @@ function w3_close() {
   </li>
   
   <li>
+  <a  href="/de/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+
+    
+  </li>
+  
+  <li>
   <a  href="/de/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+
+    
+  </li>
+  
+  <li>
+  <a  href="/de/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
 
     
   </li>
