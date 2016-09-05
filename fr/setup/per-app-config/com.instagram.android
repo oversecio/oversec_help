@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>GMail — Oversec Online Help</title>
+  <title>Instagram — Oversec Online Help</title>
 
      <script>
 
@@ -147,16 +147,17 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-      <a href="/de/setup/per-app-config/com-google-android-gm/"><img src="/static/flags/DE.png"></a>
-      <a href="/setup/per-app-config/com-google-android-gm/"><img src="/static/flags/GB.png"></a>
+      <a href="/de/setup/per-app-config/com.instagram.android"><img src="/static/flags/DE.png"></a>
+      <a href="/setup/per-app-config/com.instagram.android"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>GMail</h2>
-  <h1>GMail</h1>
-<p>On Android 4.x, it is not possible to display/decrypt encrypted mails. However, you can still use the GMail app to compose and send encrypted mails.</p>
+  <h2>Instagram</h2>
+  <h1>Instagram</h1>
+<p>Invisible encoding can not be used for public comments, Instagram is rejecting comments with invisible content.</p>
+<p>Invisible encoding may however be used in private messages!</p>
 
 
 </div>

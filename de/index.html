@@ -69,6 +69,11 @@
             return;
           }
        
+          if ('com.instagram.android'==package) {
+            redirectpage(lang+apps_root+'/com.instagram.android#'+version);
+            return;
+          }
+       
 
         redirectpage(lang+apps_root+'/nothing-special-known-about-this-app');
       }  
@@ -325,6 +330,10 @@ function w3_close() {
     
   
   
+    <a class="menuentry" href="/de/setup/per-app-config/com.instagram.android"><h5>Instagram</h5></a>
+    
+  
+  
     <a class="menuentry" href="/de/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
     
   
@@ -460,6 +469,12 @@ function w3_close() {
   
   <li>
   <a  href="/de/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+
+    
+  </li>
+  
+  <li>
+  <a  href="/de/setup/per-app-config/com.instagram.android"><h5>Instagram</h5></a>
 
     
   </li>
