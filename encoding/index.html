@@ -160,6 +160,9 @@ When entering or editing the decoy text, a border is drawn around the input fiel
 The border color will turn red if the decoy text is too short and there will probably not be enough screen space on the receiving device to show the decrypted text.  The border color will turn green if enough decoy text has been entered.</p>
 <p><a name="corrupted"></a>
 When editing the decoy text, it may happen that you accidentally delete parts of the invisible encrypted text. If this happens, Oversec will show an error  and you will have to start over! (There is no way to recover the plain text!)</p>
+<p><a name="settextfailed"></a>
+Some Apps exhibit problems with this invisible encoding and crash or freeze when Oversec tries to write back the encoded text to the app.
+There's unfortunately nothing we can do about this, other than that you need to use a different encoding that does not contain invisible characters (see below).</p>
 <h3>BASE64-Encoding</h3>
 <p>This encodes the encrypted text as a series of printable characters, guaranteed to work with all apps and systems.</p>
 <p>This is mainly intended for use with <a href="/encryption-parameters/#sym">symmetric encryption</a> for legacy SMS text messages.</p>
