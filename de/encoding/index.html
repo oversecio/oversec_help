@@ -167,13 +167,15 @@ Der Rahmen wird <em>grün</em>, wenn ausreichend Tarntext vorhanden ist.</p>
 Wenn Du den Tarntext manuell eingibst oder änderst, kann es passieren, dass du aus Versehen Teile des unsichtbaren verschlüsselten Texts löschst.
 In diesem Fall zeigt Oversec eine Fehlermeldung an und du musst leider von Vorne anfangen.</p>
 <p><a name="settextfailed"></a>
-Einige Apps haben Probleme mit der unsichrbaren Kodierung und stürzen ab oder reagieren nicht mehr, wenn Oversec versucht den kodierten Text in die App zu schreiben.
-In diesem Fall bleibt leider nichts anderes übrig, als eine andere Kodierung'zu verwenden, die keine unsichtbaren Zeichen enthält (siehe unten).</p>
+Einige Apps limitieren die Anzahl der Zeichen die in ein Eingabefeld eingegeben werden können und stürzen ab oder reagieren nicht mehr, wenn Oversec versucht den kodierten Text in die App zu schreiben.
+In diesem Fall bleibt leider nichts anderes übrig, als eine andere Verschlüsselung oder Kodierung'zu verwenden, die weniger Daten benötigt.</p>
 <h3>BASE64-Encoding</h3>
 <p>Kodiert die verschlüsselte Nachricht mit sichtbaren ASCII-Zeichen. Diese Kodierung funktioniert garantiert mit allen Apps.
 Diese Kodierung ist hauptsächlich für den Versand von <a href="/encryption-parameters/#sym">symmetrisch verschlüsselten</a> SMS Text Nachrichten gedacht.</p>
 <h3>Ascii-Armoured PGP</h3>
 <p>Diese Kodierung ist nur für <a href="/encryption-parameters/#pgp">PGP Verschküsselung</a> verfügbar und kodiert die PGP Nachricht als "ascii armoured" String.</p>
+<h3>Symmetric Encoding vs. PGP Encoding</h3>
+<p>PGP Verschlüsselung erzeugt eine viel grössere Datenmenge als symmetrische Verschlüsselung. Bitte verwende symmetrische Verschlüsselung um die Datenmenge zu verkleinern.</p>
 
 
 </div>

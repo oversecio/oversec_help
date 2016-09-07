@@ -155,12 +155,16 @@ function w3_close() {
 <div class="w3-container" style="margin-top:30px">
     
   <h2>Google Messenger (SMS/MMS)</h2>
-  <h1>Messenger</h1>
-<p><a name="19035148"><br/></a></p>
-<p>In order have Oversec correctly process what's shown in in the Messenger app, you need to enable the option "Include not important views" in the "Lab" tab of the Messenger-specific settings in Oversec.</p>
-<p><em>Please do not attempt to use PGP Encryption with this app. PGP Encryṕted messages are BIG and will need dozens of SMS to transfer.
-Moreover, The Messenger app is known to crash occasionally when PGP encrypted messages with invisible encoding  are fed into its input field.</em> 
-<a href="/encoding/#settextfailed">More Info</a></p>
+  <p>In order have Oversec correctly process what's shown in in the Messenger app, you need to enable the option "Include not important views" in the "Lab" tab of the Messenger-specific settings in Oversec.</p>
+<p>This app has a limit of max. 2000 characters in the input field. 
+For that reason, some encryption / encoding combinations may not work as they will produce (invisible) text that is much longer.</p>
+<p>If you're having problems, please try one of the follwing:</p>
+<ul>
+<li>use less recipients</li>
+<li>use a visible encoding like Base64 or ascii-armoured</li>
+<li>use symmetric encryption instead of PGP encryption</li>
+</ul>
+<p><a href="/encoding/#settextfailed">More Info</a></p>
 
 
 </div>

@@ -165,13 +165,15 @@ The border color will turn red if the decoy text is too short and there will pro
 <p><a name="corrupted"></a>
 When editing the decoy text, it may happen that you accidentally delete parts of the invisible encrypted text. If this happens, Oversec will show an error  and you will have to start over! (There is no way to recover the plain text!)</p>
 <p><a name="settextfailed"></a>
-Some Apps exhibit problems with this invisible encoding and crash or freeze when Oversec tries to write back the encoded text to the app.
-There's unfortunately nothing we can do about this, other than that you need to use a different encoding that does not contain invisible characters (see below).</p>
+Some Apps limit the number of characters that can be written back into an input field and crash or freeze when Oversec tries to write back the encoded text to the app.
+There's unfortunately nothing we can do about this, other than that you need to use a different encryption method or encoding:</p>
 <h3>BASE64-Encoding</h3>
 <p>This encodes the encrypted text as a series of printable characters, guaranteed to work with all apps and systems.</p>
 <p>This is mainly intended for use with <a href="/encryption-parameters/#sym">symmetric encryption</a> for legacy SMS text messages.</p>
 <h3>Ascii-Armoured PGP</h3>
 <p>This is only available for <a href="/encryption-parameters/#pgp">PGP encoded</a> messages and encodes them as a "ascii armoured" string.</p>
+<h3>Symmetric Encoding vs. PGP Encoding</h3>
+<p>PGP encoding produces much more data than symmetric encryption. Please use symmetric encoding if data length is a concern!</p>
 
 
 </div>
