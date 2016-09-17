@@ -68,6 +68,10 @@ function w3_close() {
     <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
     
       <div class="menuindent">
+    <a class="menuentry" href="/fr/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
     
   
@@ -155,8 +159,7 @@ function w3_close() {
 <div class="w3-container" style="margin-top:30px">
     
   <h2>Instagram</h2>
-  <p>Invisible encoding can not be used for public comments, Instagram is rejecting comments with invisible content.</p>
-<p>Invisible encoding may however be used in private messages!</p>
+  <p>Lab setting <a href="/setup/per-app-config/#spreadinvisibleencoding">Spread Invisible Encoding </a> needs to be enabled for this app, otherwise it is rejecting comments using invisible encoding.</p>
 
 
 </div>
