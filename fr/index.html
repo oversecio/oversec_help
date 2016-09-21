@@ -34,6 +34,11 @@
        
        var apps_root = '/setup/per-app-config';
        
+          if ('com-instagram-android'==package) {
+            redirectpage(lang+apps_root+'/com-instagram-android#'+version);
+            return;
+          }
+       
           if ('com-google-android-gm'==package) {
             redirectpage(lang+apps_root+'/com-google-android-gm#'+version);
             return;
@@ -71,11 +76,6 @@
        
           if ('com-google-android-talk'==package) {
             redirectpage(lang+apps_root+'/com-google-android-talk#'+version);
-            return;
-          }
-       
-          if ('com.instagram.android'==package) {
-            redirectpage(lang+apps_root+'/com.instagram.android#'+version);
             return;
           }
        
@@ -358,7 +358,7 @@ function w3_close() {
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/com.instagram.android"><h5>Instagram</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
     
   
   
@@ -510,7 +510,7 @@ function w3_close() {
   </li>
   
   <li>
-  <a  href="/fr/setup/per-app-config/com.instagram.android"><h5>Instagram</h5></a>
+  <a  href="/fr/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
 
     
   </li>
