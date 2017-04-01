@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Hangouts — Oversec Online Help</title>
+  <title>Evernote — Oversec Online Help</title>
 
      <script>
 
@@ -163,18 +163,18 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-      <a href="/de/setup/per-app-config/com-google-android-talk/"><img src="/static/flags/DE.png"></a>
-      <a href="/setup/per-app-config/com-google-android-talk/"><img src="/static/flags/GB.png"></a>
+      <a href="/de/setup/per-app-config/com-evernote/"><img src="/static/flags/DE.png"></a>
+      <a href="/setup/per-app-config/com-evernote/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Hangouts</h2>
-  <p>In order to have Oversec correctly process what's shown in in the Hangouts app, you need to enable the option "Scrape All Views" in the "Lab" tab of the Hangouts-specific settings in Oversec.</p>
-<p><em>Please do not attempt to use PGP Encryption with this app. PGP Encrypted messages are BIG and will need dozens of SMS to transfer.
-Moreover, The Hangouts app is known to crash occasionally when PGP encrypted messages with invisible encoding  are fed into its input field.</em> 
-<a href="/encoding/#settextfailed">More Info</a></p>
+  <h2>Evernote</h2>
+  <p>Oversec can not directly enter text into a note, because Evernote uses a "WebView" component for that. 
+A note can be encrypted via the <a href="/buttons/#button_compose">compose button</a></p>
+<p>Invisible encoding is not supported in Evernote, please use Base64 or Ascii-Armored PGP instead.</p>
+<p>On Android 4.x, it is not possible to display/decrypt encrypted mails. However, you can still use the GMail app to compose and send encrypted mails.</p>
 
 
 </div>

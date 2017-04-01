@@ -89,6 +89,11 @@
             return;
           }
        
+          if ('com-evernote'==package) {
+            redirectpage(lang+apps_root+'/com-evernote#'+version);
+            return;
+          }
+       
 
         redirectpage(lang+apps_root+'/nothing-special-known-about-this-app');
       }  
@@ -357,6 +362,10 @@ function w3_close() {
     
   
   
+    <a class="menuentry" href="/fr/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
     <a class="menuentry" href="/fr/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
     
   
@@ -504,6 +513,12 @@ function w3_close() {
       <ul>
   <li>
   <a  href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+
+    
+  </li>
+  
+  <li>
+  <a  href="/fr/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
 
     
   </li>

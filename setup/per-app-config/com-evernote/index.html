@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Symmetric Keys — Oversec Online Help</title>
+  <title>Evernote — Oversec Online Help</title>
 
      <script>
 
@@ -163,80 +163,18 @@ function w3_close() {
   Oversec Online Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-      <a href="/de/encryption-parameters/symmetric-keys/"><img src="/static/flags/DE.png"></a>
-      <a href="/encryption-parameters/symmetric-keys/"><img src="/static/flags/GB.png"></a>
+      <a href="/de/setup/per-app-config/com-evernote/"><img src="/static/flags/DE.png"></a>
+      <a href="/setup/per-app-config/com-evernote/"><img src="/static/flags/GB.png"></a>
   </div>
 </header>
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Symmetric Keys</h2>
-  <h4>Note: You don't need any symmetric key if you're using the "simple", password-based encryption or PGP encryption.</h4>
-<h2>Creating a Key</h2>
-<p>Tap on (+) to create a new key. Select one of the available key types:</p>
-<p><a name="random"></a></p>
-<h3>Random Key</h3>
-<p>Creates a random 256-bit secret key.</p>
-<p>It is impossible to crack such key, but it will take some effort to securely share it with your remote party.</p>
-<p>Please wait a few seconds while Oversec creates the key, then enter an Alias or Name for the key and finally tap the "Save" button.</p>
-<p><a name="pbkdf"></a></p>
-<h3>Password-based Key</h3>
-<p>Creates a key based on a passphrase.</p>
-<p>This is less secure, but you only need to agree on a passphrase, so the other party can generate a matching key.</p>
-<p>Note that this is still safer than using the "simple" passphrase  based encryption mode, as Oversec will require a lot of computing power to derive a 256 bit symmetric key from the passphrase.</p>
-<p>Please enter a secure and long passphrase or tap on "Suggest Strong Password" to let Oversec generate a secure passphrase for you.
-Then repeat-type the password to make sure you have remembered it. Then tap "continue"</p>
-<p>Please wait a few seconds while Oversec calculates a key based on the passphrase, then enter an Alias or Name for the key and finally tap the "Save" button.</p>
-<p><a name="scan"></a></p>
-<h2>Sharing / Importing a Key</h2>
-<p>The best way to import a key is to directly scan it from the other phone via QR-Code:</p>
-<h4>Alice</h4>
-<ul>
-<li>Open the key you want to share</li>
-<li>tap on "reveal" to show the full QR-Code</li>
-<li>(you may have to enter the key password to do this)</li>
-</ul>
-<h4>Bob</h4>
-<ul>
-<li>Tap on (+) to create a new key, then select "QR-Code"</li>
-<li>Scan the QR-Code from Alice's phone.</li>
-<li>Enter an Alias for the key and finally tap the "Save" button.</li>
-</ul>
-<h3>If you have received an image of the QR-Code some other way:</h3>
-<ul>
-<li>Open the image</li>
-<li>Tap "Share"</li>
-<li>Select (Oversec) "Import Key"</li>
-<li>Enter the passphrase that protects the key</li>
-<li>Enter an Alias for the key and finally tap the "Save" button.</li>
-<li><em>Make sure to verify and confirm this key</em> (see below)</li>
-</ul>
-<h2>Sharing</h2>
-<p>To share a key on an insecure channel (i.e. email)</p>
-<ul>
-<li>Open the key details</li>
-<li>Tap on "Menu" and select "Send encrypted"</li>
-<li>You may first need to unlock the key</li>
-<li>Enter and repeat a sharing password to protected the key. </li>
-<li>The person who received this key will need to know this password in order to import the key.</li>
-<li>Select the app to share the key with.</li>
-</ul>
-<h2>Backup</h2>
-<p>To back up your keys by e.g. printing the out on a piece of paper or storing them on removable media:</p>
-<ul>
-<li>Open the key details</li>
-<li>Tap on "Menu" and select "View/print encrypted"</li>
-<li>You may first need to unlock the key</li>
-<li>Enter and repeat a sharing password to protected the key. </li>
-<li>You will need to remember this password to restore / import those keys at a later time!</li>
-<li>Select the app to view / print / save the key with.</li>
-</ul>
-<p><a name="details"></a></p>
-<h2>Confirming Keys</h2>
-<p>When importing keys from another source, they will be marked as "unconfirmed". 
-This is because keys can possibly be tampered with before you get to import them.</p>
-<p>You need to contact the person you got the key from via a secure channel (phonecall?) and compare the key fingerprints.
-To start this process, open the key and tap the (&#10003;) button</p>
+  <h2>Evernote</h2>
+  <p>Oversec can not directly enter text into a note, because Evernote uses a "WebView" component for that. 
+A note can be encrypted via the <a href="/buttons/#button_compose">compose button</a></p>
+<p>Invisible encoding is not supported in Evernote, please use Base64 or Ascii-Armored PGP instead.</p>
+<p>On Android 4.x, it is not possible to display/decrypt encrypted mails. However, you can still use the GMail app to compose and send encrypted mails.</p>
 
 
 </div>
