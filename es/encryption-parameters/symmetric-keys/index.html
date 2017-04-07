@@ -1,0 +1,254 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Claves simétricas — Oversec Online Help</title>
+
+     <script>
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/es/"><h5>Bienvenido</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/es/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/panic/"><h5>Pánico</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/"><h5>Preparar</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/es/setup/common-settings/"><h5>Configuración general</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/decoy/"><h5>Contenido de señuelo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/"><h5>Configuración por aplicación</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/es/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/es/encoding/"><h5>Codificación</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/encryption-parameters/"><h5>Parámetros de cifrado</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/es/encryption-parameters/symmetric-keys/"><h5>Claves simétricas</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/es/encrypting-images/"><h5>Cifrado de imágenes</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/faq/"><h5>FAQ</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/es/contact/"><h5>Contacto</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+  Oversec Online Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a href="/de/encryption-parameters/symmetric-keys/"><img src="/static/flags/DE.png"></a>
+      <a href="/encryption-parameters/symmetric-keys/"><img src="/static/flags/GB.png"></a>
+      <a href="/es/encryption-parameters/symmetric-keys/"><img src="/static/flags/ES.png"></a>
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+  <h2>Claves simétricas</h2>
+  <h4>Nota: No necesita ninguna clave simétrica si utiliza el cifrado "simple", basado en contraseña o el cifrado PGP.</h4>
+<h2>Creación de una clave</h2>
+<p>Toque en (+) para crear una nueva clave. Seleccione uno de los tipos de llave disponibles:</p>
+<p><a name="random"></a></p>
+<h3>Clave aleatoria</h3>
+<p>Crea una clave secreta aleatoria de 256 bits.</p>
+<p>Es imposible romper tal clave, pero tomará un cierto esfuerzo para compartirlo con seguridad con su partido alejado.</p>
+<p>Espere unos segundos mientras Oversec crea la clave, luego ingrese un Alias o Nombre para la clave y finalmente toque el botón "Guardar".</p>
+<p><a name="pbkdf"></a></p>
+<h3>Clave basada en contraseña</h3>
+<p>Crea una clave basada en una contraseña.</p>
+<p>Esto es menos seguro, pero sólo es necesario acordar una frase de contraseña, por lo que la otra parte puede generar una clave correspondiente.</p>
+<p>Tenga en cuenta que esto es aún más seguro que usar el modo de encriptación basado en "passphrase" simple, ya que Oversec requerirá mucha energía computacional para derivar una clave simétrica de 256 bits de la frase de contraseña.</p>
+<p>Introduce una contraseña segura y larga o puntea en "Sugerir contraseña segura" para que Oversec genere una contraseña segura para ti.
+A continuación, repita el tipo de contraseña para asegurarse de que se han acordado. A continuación, pulse "continuar"</p>
+<p>Espere unos segundos mientras Oversec calcula una clave basada en la frase de contraseña, luego ingrese un alias o nombre para la clave y finalmente toque el botón "Guardar".</p>
+<p><a name="scan"></a></p>
+<h2>Compartir / Importar una clave</h2>
+<p>La mejor manera de importar una clave es escanearla directamente desde el otro teléfono a través de código QR:</p>
+<h4>Alice</h4>
+<ul>
+<li>Abrir la clave que desea compartir</li>
+<li>Toque en "revelar" para mostrar el código QR completo</li>
+<li>(Puede que tenga que ingresar la clave de contraseña para hacer esto)</li>
+</ul>
+<h4>Bob</h4>
+<ul>
+<li>Toque en (+) para crear una nueva clave, luego seleccione "código QR"</li>
+<li>Escanear el código QR desde el teléfono de Alice.</li>
+<li>Introduzca un alias para la clave y, finalmente, toque el botón "Guardar".</li>
+</ul>
+<h3>Si ha recibido una imagen del código QR de otra manera:</h3>
+<ul>
+<li>Abrir la imagen</li>
+<li>Toque en "Compartir"</li>
+<li>Seleccionar (Oversec) "Importación de clave"</li>
+<li>Introduzca la contraseña que protege la clave</li>
+<li>Introduzca un alias para la clave y, finalmente, toque el botón "Guardar".</li>
+<li><em>Asegúrese de verificar y confirmar esta tecla</em> (ver abajo)</li>
+</ul>
+<h2>Compartiendo</h2>
+<p>Para compartir una clave en un canal inseguro (por ejemplo, correo electrónico)</p>
+<ul>
+<li>Abrir los detalles clave</li>
+<li>Toque en "Menú" y seleccione "Enviar cifrado"</li>
+<li>Es posible que primero deba desbloquear la tecla</li>
+<li>Introduzca y repita una contraseña de uso compartido para proteger la clave.</li>
+<li>La persona que recibió esta clave necesitará saber esta contraseña para importar la clave.</li>
+<li>Seleccione la aplicación con la que desea compartir la clave.</li>
+</ul>
+<h2>Apoyo</h2>
+<p>Para realizar copias de seguridad de sus claves, p. Imprimiendo el papel en un pedazo de papel o almacenándolos en medios extraíbles:</p>
+<ul>
+<li>Abrir los detalles clave</li>
+<li>Toque en "Menú" y seleccione "Ver / imprimir cifrado"</li>
+<li>Es posible que primero deba desbloquear la tecla</li>
+<li>Introduzca y repita una contraseña de uso compartido para proteger la clave.</li>
+<li>¡Tendrá que recordar esta contraseña para restaurar / importar esas claves más adelante!</li>
+<li>Seleccione la aplicación para ver / imprimir / guardar la clave con.</li>
+</ul>
+<p><a name="details"></a></p>
+<h2>Confirmación de claves</h2>
+<p>Al importar claves de otra fuente, se marcarán como "no confirmadas".
+Esto es porque las llaves se pueden alterar posiblemente antes de que usted consiga importarlos.</p>
+<p>Usted necesita ponerse en contacto con la persona que recibió la clave de a través de un canal seguro (phonecall?) Y comparar las huellas dactilares clave.
+Para iniciar este proceso, abra la tecla y toque el botón (✓)</p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>
