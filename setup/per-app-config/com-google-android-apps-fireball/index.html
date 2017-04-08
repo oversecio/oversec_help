@@ -13,6 +13,21 @@
   <title>Allo — Oversec Online Help</title>
 
      <script>
+    /*
+    Browser Language Redirect script- By JavaScript Kit
+    For this and over 400+ free scripts, visit http://www.javascriptkit.com
+    This notice must stay intact
+    */
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes=new Array("en", "de", "es", "pt", "default")
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects=new Array("en", "de", "es", "pt", "en")
+    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+    var gotodefault=1
+    
+
+    //alert("languageinfo: "+languageinfo.substr(0,2));
+
 
 
 
@@ -25,6 +40,37 @@ function w3_close() {
     x.style.display = "none";
 }
 
+//TODO: write a lektor plugin (see https://github.com/lektor/lektor-markdown-admonition for an example)
+//to fix the links during *build* time
+
+function prependAlternatives() {
+
+  var curlang=""
+  for (i=0;i<langcodes.length-1;i++){
+        if (window.location.pathname.startsWith("/"+langcodes[i]+"/")) {
+          // alert("Hoorikaj" +i+ "=="+langcodes[i]+" // "+langredirects[i])
+          curlang = langcodes[i]
+          break
+        }
+      }
+
+
+  for(i=0;i<document.links.length;i++) 
+    { 
+     pathname=document.links[i].pathname
+     classname = document.links[i].className
+     if (   "noprepend"!=classname &&
+             pathname.startsWith("/") && 
+            !pathname.startsWith("/"+curlang+"/")
+            ) 
+       {
+         newpathname =  "/" +curlang +pathname;
+         //alert ("newpathname="+newpathname)
+         document.links[i].pathname = newpathname;
+       }
+    } 
+}
+window.onload = prependAlternatives
 
     </script>
 
@@ -163,10 +209,10 @@ function w3_close() {
  Oversec Help
   </span>
   <div style="float: right; display: inline-block; margin-right:5px">
-      <a href="/de/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/DE.png"></a>
-      <a href="/en/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/GB.png"></a>
-      <a href="/es/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/ES.png"></a>
-      <a href="/pt/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/PT.png"></a>
+      <a class="noprepend" href="/de/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/en/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/GB.png"></a>
+      <a class="noprepend" href="/es/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/ES.png"></a>
+      <a class="noprepend" href="/pt/setup/per-app-config/com-google-android-apps-fireball/"><img src="/static/flags/PT.png"></a>
   </div>
 </header>
 
