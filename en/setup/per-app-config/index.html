@@ -1,0 +1,312 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Per-App Configuration — Oversec Online Help</title>
+
+     <script>
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/en/"><h5>Welcome</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/panic/"><h5>Panic</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/"><h5>Setup</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/decoy/"><h5>Decoy Content</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/common-settings/"><h5>General Settings</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encoding/"><h5>Encoding</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encrypting-images/"><h5>Encrypting Images</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/faq/"><h5>FAQ</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/contact/"><h5>Contact</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+ Oversec Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a href="/de/setup/per-app-config/"><img src="/static/flags/DE.png"></a>
+      <a href="/en/setup/per-app-config/"><img src="/static/flags/GB.png"></a>
+      <a href="/es/setup/per-app-config/"><img src="/static/flags/ES.png"></a>
+      <a href="/pt/setup/per-app-config/"><img src="/static/flags/PT.png"></a>
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+ 
+
+  <h4>List of apps with known issues:</h4>
+  <ul>
+
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-instagram-android/">Instagram</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-google-android-gm/">GMail</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-android-messaging/">Messaging (AOSP) (SMS/MMS)</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/org-telegram-messenger/">Telegram</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-google-android-apps-messaging/">Google Messenger (SMS/MMS)</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-google-android-apps-fireball/">Allo</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-google-android-apps-inbox/">Inbox by Gmail</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/org-thoughtcrime-securesms/">Signal</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-facebook-orca/">Facebook Messenger</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-wire/">Wire</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-google-android-talk/">Hangouts</a>
+          </li>
+       
+          <li>
+          <a  href="/en/setup/per-app-config/com-evernote/">Evernote</a>
+          </li>
+       
+  </ul>
+ <h2>Per-App Configuration</h2>
+  <p><div class="buttoncircle"><img src="ic_settings_black_24dp.png"/></div>
+Note This configuration page can also be  opened by tapping the Oversec config button from within any oversec-enabled app.</p>
+<p><a name="main"></a></p>
+<h2>Options</h2>
+<p>General options</p>
+<h4>Enable Oversec</h4>
+<p>Oversec will only show itself on top of apps that are enabled here.</p>
+<h4>Config Button</h4>
+<p>Shows the [Config Button] (/buttons#button_config) that allows direct access to this config page.</p>
+<p>Once you're done with the basic configuration, you can safely disable this button - you can still access the app config through the notification bar or through the main oversec app.</p>
+<h4>Start hidden</h4>
+<p>When checked, Oversec will not initially be shown when entering an Oversec-enabled app. You will have to tap on the (invisible)  [Hide Button] (/buttons#button_hide) to show the Oversec screen overlay.</p>
+<h4>Hide Button</h4>
+<p>Shows the [Hide Button] (/buttons#button_hide) that allows to temporarily hide the Oversec screen overlay.</p>
+<p>Hint: This buttons also doubles as <a href="/panic">Panic Button</a>, so it's recommended to always keep this button enabled!</p>
+<h4>Decrypt/Clear Button</h4>
+<p>Shows the [Decrypt Button] (/buttons#button_decrypt) that allows to decrypt or clear the current input field.</p>
+<h4>Compose Button</h4>
+<p>Shows the [Compose Button] (/buttons#button_compose) that allows you do encrypt and paste text via the clipboard</p>
+<h4>Camera Button</h4>
+<p>Shows the [Camera Button] (/buttons#button_camera) that allows you do <a href="/encrypting-images">directly take and send encrypted photos</a></p>
+<p><a name="appearance"></a></p>
+<h2>Appearance</h2>
+<p>Visual appearance</p>
+<p>Fine-Tune the visual appearance of the Oversec screen overlays - things like fonts, sizes, padding, colors, transparencies etc.</p>
+<p><a name="lab"></a></p>
+<h2>Lab</h2>
+<p>Extended and incubating options</p>
+<h4>Info Button</h4>
+<p>En-/Disables the [Info Button] (/buttons#button_info) to display additional encryption information.</p>
+<h4>Tap to show info</h4>
+<p>When enabled, tapping on an encrypted text will show detailed encryption info.</p>
+<p><strong>Warning: This might interfere with the UX of the underlying app, as it will not longer receive some tap events!</strong></p>
+<h4>Long-Tap to show info</h4>
+<p>When enabled, long-tapping on an encrypted text will show detailed encryption info.</p>
+<p><strong>Warning: This might interfere with the UX of the underlying app, as it will not longer receive some long-tap events!</strong></p>
+<h4>Encrypt Button</h4>
+<p>Show the [Encrypt Button] (/buttons#button_encrypt) next to the active input field.</p>
+<p>(Decrypt button also won't show if encrypt button is not shown)</p>
+<h4>Toggle encrypt button on long-tap</h4>
+<p>Shows or hides the  [Encrypt Button] (/buttons#button_encrypt)  when long-tapping on an input field.</p>
+<p><strong>Warning: This might interfere with the UX of the underlying app!</strong></p>
+<h4>Show input dialogs immediately</h4>
+<p>When a (password) input dialog is about to be shown in order to decrypt, show it immediately without asking the user first.</p>
+<h4>Notification</h4>
+<p>Show a permanent notification to control Oversec through the Android status bar.</p>
+<h4>Show decrypt overlay above input</h4>
+<p>Show the decrypted (plain) text right <em>above</em> an active input field, making it easier to manually review or edit the decoy text.</p>
+<h4>Expand decrypted text vertically</h4>
+<p>Allocates more vertical space for decrypted text if it doesn't fit into the space used by the encrypted text.</p>
+<p><strong>Warning: May obstruct parts of the underlying app.</strong></p>
+<h4>Keep Line Breaks</h4>
+<p>If plain text contains line breaks, put equal number of breaks into the decoy text.</p>
+<p><strong>Warning: Leaks some (meta) information about the plaintext.</strong></p>
+<h4>Add padding before encrypting</h4>
+<p>Add (at max) this number of random bytes before encrypting. This prevents an attacker from guessing the original message by the number of characters</p>
+<h4>Singleton encryption params</h4>
+<p>Stores only one set of encryption parameters per app. This is intended for notes keeping apps only, it should not be enabled for communication apps, where Oversec will try to keep distinct parameters per thread or conversation.</p>
+<h4>Always show encryption params</h4>
+<p>When enabled, Oversec will never automatically reuse previous encryption parameters, but always show the encryption parameters screen before encrypting.</p>
+<h4>High Quality Scraping</h4>
+<p>Performs more frequent and deeper screen reading. Produces a smoother UX at the cost of increased battery use.</p>
+<h4>Scrape All Views</h4>
+<p>Include views that are deemed as "Not Important". This is needed for a few apps only and it slows down Oversec and uses more battery!</p>
+<p><a name="spreadinvisibleencoding"></a></p>
+<h4>Spread Invisible Encoding</h4>
+<p>Spread invisible characters within decoy text, rather than putting all of them at the beginning. This is needed for some apps like e.g. Instagram.
+As a consequence though, "manual padding" can not be used.</p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>

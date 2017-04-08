@@ -1,0 +1,219 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Encrypting Images — Oversec Online Help</title>
+
+     <script>
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/en/"><h5>Welcome</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/panic/"><h5>Panic</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/"><h5>Setup</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/decoy/"><h5>Decoy Content</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/common-settings/"><h5>General Settings</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encoding/"><h5>Encoding</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encrypting-images/"><h5>Encrypting Images</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/faq/"><h5>FAQ</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/contact/"><h5>Contact</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+ Oversec Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a href="/de/encrypting-images/"><img src="/static/flags/DE.png"></a>
+      <a href="/en/encrypting-images/"><img src="/static/flags/GB.png"></a>
+      <a href="/es/encrypting-images/"><img src="/static/flags/ES.png"></a>
+      <a href="/pt/encrypting-images/"><img src="/static/flags/PT.png"></a>
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+  <h2>Encrypting Images</h2>
+  <h3>Encrypting an existing image</h3>
+<p>To encrypt and send an existing image:</p>
+<ul>
+<li>In your Photos or Gallery app, open the picture</li>
+<li>Tap on "Share"</li>
+<li>Tap on "Encrypt Image"</li>
+<li>Next, tap on the app you want to send the encrypted image with</li>
+<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
+<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
+<li>Select chat / contact / recipient in the sender app.</li>
+</ul>
+<h3>Taking an encrypted photo</h3>
+<p>Oversec allows you to take a photo and send or store it as encrypted photo, without ever saving the plain photo to your device!</p>
+<p>To take an encrypted photo:</p>
+<ul>
+<li>Enable the <a href="/buttons#button_camera">Camera button</a> for the app</li>
+<li>Tap on the  <a href="/buttons#button_camera">Camera button</a> </li>
+<li>Take and confirm the photo</li>
+<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
+<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
+<li>Select chat / contact / recipient in the underlying app.</li>
+</ul>
+<h3>Decrypting an image</h3>
+<p>To decrypt and show the contents of an encrypted image:</p>
+<ul>
+<li>Open / view the encrypted image</li>
+<li>Tap on "Share" </li>
+<li>Tap on "Decrypt Image"</li>
+<li>Enter passphrase / unlock key</li>
+</ul>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>

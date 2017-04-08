@@ -1,0 +1,218 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Encryption Parameters — Oversec Online Help</title>
+
+     <script>
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/en/"><h5>Welcome</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/panic/"><h5>Panic</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/"><h5>Setup</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/decoy/"><h5>Decoy Content</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/common-settings/"><h5>General Settings</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encoding/"><h5>Encoding</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/en/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/en/encrypting-images/"><h5>Encrypting Images</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/faq/"><h5>FAQ</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/en/contact/"><h5>Contact</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+ Oversec Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a href="/de/encryption-parameters/"><img src="/static/flags/DE.png"></a>
+      <a href="/en/encryption-parameters/"><img src="/static/flags/GB.png"></a>
+      <a href="/es/encryption-parameters/"><img src="/static/flags/ES.png"></a>
+      <a href="/pt/encryption-parameters/"><img src="/static/flags/PT.png"></a>
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+  <h2>Encryption Parameters</h2>
+  <p><a name="simple"><br/></a></p>
+<h1>Simple</h1>
+<p>Encrypt by sharing a simple password only.</p>
+<p>This is a good way to try out Oversec, but it's possibly not very secure: An attacker can simply try out / guess the password, so make sure you use a very long and complicated password.</p>
+<h3>Adding Passwords</h3>
+<p>To encrypt or decrypt, you will first have to add another password by tapping "Add Password". Oversec will keep and remember a password until the time you specify when entering the password.</p>
+<p>Once a password has expired, it is completely gone. You will have to enter it again on this page!</p>
+<h3>Selecting Passwords</h3>
+<p>To encrypt with one or multiple passwords, simply tap on the checkbox next to each password. Oversec will encrypt the message for each of the selected passwords - anybody who knows at least one of the selected passwords will be able to decrypt the message.</p>
+<p><a name="sym"><br/></a></p>
+<h1>Symmetric</h1>
+<p>Encrypt by sharing a secure symmetric key</p>
+<p>This is a very safe way to encrypt, but you will have to share the encryption key through a safe channel - ideally by meeting in person and …<a href="/encryption-parameters/symmetric-keys/key-create">sharing the symmetric key via Camera and QR-Code</a>.</p>
+<h3>Adding keys</h3>
+<p>Please use the main Oversec app to <a href="/encryption-parameters/symmetric-keys">create and organize your symmetric keys</a>.</p>
+<h3>Selecting Keys</h3>
+<p>To encrypt with one or multiple keys, simply tap on the checkbox next to each key. Oversec will encrypt the message for each of the selected keys - anybody who has at least one of the selected keys will be able to decrypt the message.</p>
+<p><a name="pgp"><br/></a></p>
+<h2>PGP</h2>
+<p>Encrypt with PGP public/private keys. You need the <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeyChain App</a> to use this method and manage your PGP keys.
+<br/></p>
+<h4>Important: PGP encryption adds about 2 kilobytes or more of data to your encrypted message. Please consider this and depending on your data plan you might want to use symmetric encryption instead (which requires much less data).</h4>
+<h3>Own Key</h3>
+<p>If you haven't done so yet, select your own PGP key next to "myself". You need to do this if you want to be able to encrypt messages yourself or if you want to sign messages.</p>
+<h3>Signing a message</h3>
+<p>Check the "Sign Message" checkbox to sign the message with your own private key.</p>
+<h3>Recipients</h3>
+<p>Tap the (+) button to add recipients. This will open the OpenKeyChain app where you can select one or more public keys. (You can download / manage public keys in that app!)</p>
+<p>Oversec will encrypt the message with the public keys of each of the selected recipients and yourself - anybody who has a matching private key will be able to decrypt his message.</p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>
