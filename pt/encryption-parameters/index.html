@@ -1,0 +1,218 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Parâmetros de Criptografia — Oversec Online Help</title>
+
+     <script>
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/pt/"><h5>Bem vinda</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/pt/buttons/"><h5>Botões</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/"><h5>Configuração</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/pt/setup/common-settings/"><h5>Configurações Gerais</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/decoy/"><h5>Conteúdo de Chamariz</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/"><h5>Configuração por-app</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/pt/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/pt/panic/"><h5>Pânico</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/encoding/"><h5>Codificação</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/encryption-parameters/"><h5>Parâmetros de Criptografia</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/pt/encryption-parameters/symmetric-keys/"><h5>Chaves simétricas</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/pt/encrypting-images/"><h5>Criptografar imagens</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/faq/"><h5>Perguntas frequentes</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/pt/contact/"><h5>Contato</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+  Oversec Online Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a href="/de/encryption-parameters/"><img src="/static/flags/DE.png"></a>
+      <a href="/encryption-parameters/"><img src="/static/flags/GB.png"></a>
+      <a href="/es/encryption-parameters/"><img src="/static/flags/ES.png"></a>
+      <a href="/pt/encryption-parameters/"><img src="/static/flags/PT.png"></a>
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+  <h2>Parâmetros de Criptografia</h2>
+  <p><a name="simple"><br/></a></p>
+<h1>Simples</h1>
+<p>Criptografar compartilhando apenas uma senha simples.</p>
+<p>Esta é uma boa maneira de testar Oversec, mas é possivelmente não muito seguro: um invasor pode simplesmente experimentar / adivinhar a senha, portanto, certifique-se de usar uma senha muito longa e complicada.</p>
+<h3>Adicionando senhas</h3>
+<p>Para criptografar ou descriptografar, você precisará primeiro adicionar outra senha tocando em "Adicionar senha". O oversec manterá e lembrará uma senha até o momento que você especificar ao inserir a senha.</p>
+<p>Uma vez que a senha expirou, ela desapareceu completamente. Você terá que entrar novamente nessa página!</p>
+<h3>Selecionando senhas</h3>
+<p>Para criptografar com uma ou várias senhas, basta tocar na caixa de seleção ao lado de cada senha. Oversec irá criptografar a mensagem para cada uma das senhas selecionadas - qualquer pessoa que conheça pelo menos uma das senhas selecionadas será capaz de descriptografar a mensagem.</p>
+<p><a name="sym"><br/></a></p>
+<h1>Simétrico</h1>
+<p>Criptografar compartilhando uma chave simétrica segura</p>
+<p>Esta é uma maneira muito segura de criptografar, mas você terá que compartilhar a chave de criptografia através de um canal seguro - idealmente por reunião em pessoa e ... <a href="/encryption-parameters/symmetric-keys/key-create">compartilhamento da chave simétrica via câmera e código QR</a>.</p>
+<h3>Adicionando chaves</h3>
+<p>Use o aplicativo Oversec principal para <a href="/encryption-parameters/symmetric-keys">criar e organizar suas chaves simétricas</a>.</p>
+<h3>Selecionando Chaves</h3>
+<p>Para criptografar com uma ou várias teclas, basta tocar na caixa de seleção ao lado de cada tecla. Oversec irá criptografar a mensagem para cada uma das chaves selecionadas - qualquer pessoa que tenha pelo menos uma das chaves selecionadas será capaz de descriptografar a mensagem.</p>
+<p><a name="pgp"><br/></a></p>
+<h2>PGP</h2>
+<p>Criptografar com chaves PGP públicas / privadas. Você precisa do <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeyChain App</a> para usar esse método e gerenciar suas chaves PGP.
+<br/></p>
+<h4>Importante: a criptografia PGP adiciona cerca de 2 kilobytes ou mais de dados à sua mensagem criptografada. Por favor, considere isso e dependendo do seu plano de dados, você pode querer usar a criptografia simétrica em vez disso (o que requer muito menos dados).</h4>
+<h3>Chave Própria</h3>
+<p>Se você ainda não o fez, selecione sua própria chave PGP ao lado de "Eu". Você precisa fazer isso se quiser ser capaz de criptografar mensagens você mesmo ou se você quiser assinar mensagens.</p>
+<h3>Assinando uma mensagem</h3>
+<p>Marque a caixa de seleção "Assinar mensagem" para assinar a mensagem com sua própria chave privada.</p>
+<h3>Destinatários</h3>
+<p>Toque no botão (+) para adicionar destinatários. Isso abrirá o aplicativo OpenKeyChain onde você pode selecionar uma ou mais chaves públicas. (Você pode fazer o download / gerenciar chaves públicas nesse aplicativo!)</p>
+<p>Oversec irá criptografar a mensagem com as chaves públicas de cada um dos destinatários selecionados e você mesmo - qualquer pessoa que tenha uma chave privada correspondente será capaz de descriptografar sua mensagem.</p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>
