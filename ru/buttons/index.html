@@ -1,0 +1,295 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>Buttons — Oversec Online Help</title>
+
+     <script>
+    /*
+    Browser Language Redirect script- By JavaScript Kit
+    For this and over 400+ free scripts, visit http://www.javascriptkit.com
+    This notice must stay intact
+    */
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+    var gotodefault=1
+    
+
+    //alert("languageinfo: "+languageinfo.substr(0,2));
+
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+//TODO: write a lektor plugin (see https://github.com/lektor/lektor-markdown-admonition for an example)
+//to fix the links during *build* time
+
+function prependAlternatives() {
+
+  var curlang=""
+  for (i=0;i<langcodes.length-1;i++){
+        if (window.location.pathname.startsWith("/"+langcodes[i]+"/")) {
+          // alert("Hoorikaj" +i+ "=="+langcodes[i]+" // "+langredirects[i])
+          curlang = langcodes[i]
+          break
+        }
+      }
+
+
+  for(i=0;i<document.links.length;i++) 
+    { 
+     pathname=document.links[i].pathname
+     classname = document.links[i].className
+     if (   "noprepend"!=classname &&
+             pathname.startsWith("/") && 
+            !pathname.startsWith("/"+curlang+"/")
+            ) 
+       {
+         newpathname =  "/" +curlang +pathname;
+         //alert ("newpathname="+newpathname)
+         document.links[i].pathname = newpathname;
+       }
+    } 
+}
+window.onload = prependAlternatives
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/ru/"><h5>Добро пожаловать!</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/"><h5>Настроить</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/setup/common-settings/"><h5>Общие настройки</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/decoy/"><h5>Содержание приманки</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/"><h5>конфигурации приложения</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/ru/panic/"><h5>Режим паники</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/encoding/"><h5>Кодировка</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/encryption-parameters/"><h5>Параметры шифрования</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/encryption-parameters/symmetric-keys/"><h5>Симметричные ключи</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/ru/encrypting-images/"><h5>Шифрование изображений</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/faq/"><h5>Вопросы-Ответы</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/contact/"><h5>О КОМПАНИИ</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+ Oversec Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a class="noprepend" href="/de/buttons/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/en/buttons/"><img src="/static/flags/GB.png"></a>
+      <a class="noprepend" href="/es/buttons/"><img src="/static/flags/ES.png"></a>
+      <a class="noprepend" href="/pt/buttons/"><img src="/static/flags/PT.png"></a>
+      <a class="noprepend" href="/ru/buttons/"><img src="/static/flags/RU.png"></a>
+
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+  <h2>Buttons</h2>
+  <p><a name="button_hide"></a></p>
+<h3>Кнопка «Скрыть»</h3>
+<div class="buttoncircle"><img  src="/buttons/ic_clear_black_24dp.png"></img></div><p>Нажмите эту кнопку, чтобы временно скрыть все наложения Oversec.</p>
+<p>Нажмите снова в том же месте (пока эта и все остальные кнопки скрыты), чтобы скрыть!</p>
+<p>Эта кнопка также функционирует как кнопка паники: нажмите ее длиннее, чтобы войти в <a href="/panic">Панический режим</a></p>
+<p>Двойное нажатие этой кнопки вызывает <a href="/setup/per-app-config/">страницу конфигурации приложения</a>, где вы можете настроить различные аспекты работы Oversec в сочетании с текущим приложением.</p>
+<p><em>Примечание: эту кнопку можно перетаскивать и размещать в любом месте экрана.</em></p>
+<p><a name="button_encrypt"></a></p>
+<h3>Кнопка шифрования</h3>
+<div class="buttoncircle"><img src="/buttons/ic_lock_black_24dp.png"></img></div><p><a name="button_encrypt_initial"></a>
+Нажмите эту кнопку, чтобы зашифровать введенный текст. После того, как текст зашифрован, эта кнопка автоматически исчезает. Поэтому, если вы поместите эту кнопку поверх кнопки «отправить» или «сохранить» базового приложения, вы можете убедиться, что вы случайно не отправляете или не сохраняете обычный текст.</p>
+<p><a name="button_encrypt_encryptionparamsremembered"></a>
+Если вы еще ничего не зашифровали в этом приложении, нажатие этой кнопки вызовет экран для ввода или изменения параметров шифрования. В следующий раз, когда вы нажмете эту кнопку, эти параметры будут использоваться, и шифрование произойдет мгновенно.
+Если вы по-прежнему хотите изменить параметры шифрования, нажмите эту кнопку, чтобы принудительно вызвать экран параметров шифрования.</p>
+<p><em>Совет: Двойное нажатие этой кнопки скроет его на короткое время, так что кнопки основного приложения можно будет использовать.
+Поэтому, если кнопка Encrypt расположена прямо над кнопкой отправки основного приложения, вы можете <em>Тройной</em> нажать в этой позиции, чтобы отправить <em>незашифрованный</em> сообщение</em></p>
+<p><em>Примечание: эту кнопку можно перетаскивать и помещать вокруг поля ввода.</em></p>
+<p><a name="button_compose"></a></p>
+<h3>Кнопка «Создать»</h3>
+<div class="buttoncircle"><img src="/buttons/ic_create_black_24dp.png"></img></div><p>Эта кнопка позволяет вводить текст на отдельном экране, а затем помещать зашифрованный текст в буфер обмена.
+Затем вы можете вставить текст из буфера обмена в поля ввода, которые в противном случае недоступны Oversec.
+(Пример: сообщение электронной почты в Inbox от Gmail)
+Нажмите эту кнопку, чтобы открыть экран ввода.</p>
+<p><a name="compose_encrypt_button"></a>
+После того, как вы ввели текст, нажмите кнопку на этом экране. Введенный текст зашифровывается и помещается в буфер обмена,</p>
+<p><a name="paste_clipboard"></a>
+Теперь нажмите на поле ввода и выберите «Вставить», чтобы вставить зашифрованный текст из буфера обмена в поле ввода.</p>
+<p><em>Примечание: эту кнопку можно перетаскивать и размещать в любом месте экрана.</em></p>
+<p><em>Примечание: эта кнопка не включена по умолчанию. Нажмите кнопку конфигурации, чтобы открыть <a href="/setup/per-app-config/">страницу конфигурации приложения</a>, где вы можете включить кнопку компоновки.</em></p>
+<p><a name="button_decrypt"></a></p>
+<h3>Кнопка «Расшифровать/Очистить»</h3>
+<p>Эта кнопка меняет свою иконку и функцию в зависимости от текста в поле ввода:</p>
+<div class="buttoncircle"><img src="/buttons/ic_lock_open_black_24dp.png"></img></div><p>В поле ввода есть зашифрованный текст. Нажмите эту кнопку, чтобы расшифровать ее и вернуть текст в поле ввода.</p>
+<p><em>Примечание: эта функция недоступна в Android Kitkat по соображениям безопасности!</em></p>
+<div class="buttoncircle"><img  src="/buttons/ic_backspace_black_24dp.png"></img></div><p>В поле ввода есть текст. Нажатие этой кнопки очищает весь текст.</p>
+<p><em>Примечание: эту кнопку можно перетаскивать и помещать вокруг поля ввода.</em></p>
+<p><a name="button_info"></a></p>
+<h3>Кнопка информации</h3>
+<div class="buttoncircle"><img src="/buttons/ic_info_outline_black_24dp.png"></img></div><p>Нажмите эту кнопку, чтобы перейти в информационный режим.</p>
+<p>В режиме информации будет меньше версия этой кнопки рядом с каждым зашифрованным текстом, найденным на экране.
+Нажмите на маленькую информационную кнопку, чтобы отобразить подробную информацию об этом тексте.</p>
+<div class="buttoncircle"><img  src="/buttons/ic_not_interested_black_24dp.png"></img></div><p>Пока в инфо-режиме эта кнопка выглядит, как показано выше. Коснитесь его, чтобы выйти из режима информации.</p>
+<p><em>Примечание: эту кнопку можно перетаскивать и размещать в любом месте экрана.</em></p>
+<p><em>Примечание: эта кнопка не включена по умолчанию. Нажмите кнопку конфигурации, чтобы открыть <a href="/setup/per-app-config/">страницу конфигурации приложения</a>, где вы можете включить кнопку информации.</em></p>
+<p>*Note: Long-tapping the Info-Button brings up the <a href="/setup/per-app-config/">per-app configuration page</a> (see below). You can thus enable the info button and disable the config button in the <a href="/setup/per-app-config/">per-app configuration page</a> and still have access to the app config by long-tapping the info button.</p>
+<ul>
+<li>Примечание. Длительное нажатие на кнопку Info приводит к [странице конфигурации приложения (/setup/per-app-config/) (см. Ниже). Таким образом, вы можете включить кнопку информации и отключить кнопку конфигурации на [странице конфигурации приложения (/setup/per-app-config/) и до сих пор иметь доступ к настройке приложения, нажав кнопку информации.</li>
+</ul>
+<p><a name="button_config"></a></p>
+<h3>Кнопка «Настройка»</h3>
+<div class="buttoncircle"><img src="/buttons/ic_settings_black_24dp.png"></img></div><p>При нажатии этой кнопки вызывается <a href="/setup/per-app-config/">страница конфигурации приложения</a>, где вы можете настроить различные аспекты работы Oversec в сочетании с текущим приложением.</p>
+<p><em>Примечание: эту кнопку можно перетаскивать и размещать в любом месте экрана.</em></p>
+<p><a name="button_camera"></a></p>
+<h3>Кнопка «Камера»</h3>
+<div class="buttoncircle"><img src="/buttons/ic_camera_alt_black_24dp.png"></img></div><p>При нажатии этой кнопки вы можете сделать и отправить зашифрованное изображение.</p>
+<p>Эта кнопка доступна только для приложений, поддерживающих отправку изображений.
+Вы можете выбрать, хотите ли вы увидеть или скрыть эту кнопку на <a href="/setup/per-app-config/">странице конфигурации приложения</a></p>
+<p><em>Примечание: эту кнопку можно перетаскивать и размещать в любом месте экрана.</em></p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>

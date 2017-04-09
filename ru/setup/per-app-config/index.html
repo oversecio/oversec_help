@@ -1,0 +1,360 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<link rel="stylesheet" href="/static/w3.css">
+  <link rel="stylesheet" href="/static/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <title>конфигурации приложения — Oversec Online Help</title>
+
+     <script>
+    /*
+    Browser Language Redirect script- By JavaScript Kit
+    For this and over 400+ free scripts, visit http://www.javascriptkit.com
+    This notice must stay intact
+    */
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+    var gotodefault=1
+    
+
+    //alert("languageinfo: "+languageinfo.substr(0,2));
+
+
+
+
+function w3_open() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "block";
+}
+function w3_close() {
+    var x = document.getElementsByClassName("w3-sidenav")[0];
+    x.style.display = "none";
+}
+
+//TODO: write a lektor plugin (see https://github.com/lektor/lektor-markdown-admonition for an example)
+//to fix the links during *build* time
+
+function prependAlternatives() {
+
+  var curlang=""
+  for (i=0;i<langcodes.length-1;i++){
+        if (window.location.pathname.startsWith("/"+langcodes[i]+"/")) {
+          // alert("Hoorikaj" +i+ "=="+langcodes[i]+" // "+langredirects[i])
+          curlang = langcodes[i]
+          break
+        }
+      }
+
+
+  for(i=0;i<document.links.length;i++) 
+    { 
+     pathname=document.links[i].pathname
+     classname = document.links[i].className
+     if (   "noprepend"!=classname &&
+             pathname.startsWith("/") && 
+            !pathname.startsWith("/"+curlang+"/")
+            ) 
+       {
+         newpathname =  "/" +curlang +pathname;
+         //alert ("newpathname="+newpathname)
+         document.links[i].pathname = newpathname;
+       }
+    } 
+}
+window.onload = prependAlternatives
+
+    </script>
+
+
+</head>
+<body>
+
+<nav  class="w3-sidenav w3-card-2 w3-top main-nav" style="width:50%;display:none;z-index:2">
+  <div class="w3-container w3-theme-d2 oversec-header"  onclick="w3_close()">
+   <h4>
+   <i class="w3-closenav w3-rleft w3-xlarge fa fa-close" style="padding-top:5px" onclick="w3_close()"></i>
+
+    </h4>
+  </div>
+  
+
+<div >
+  
+    <a class="menuentry" href="/ru/"><h5>Добро пожаловать!</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/buttons/"><h5>Buttons</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/"><h5>Настроить</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/setup/common-settings/"><h5>Общие настройки</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/decoy/"><h5>Содержание приманки</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/"><h5>конфигурации приложения</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-evernote/"><h5>Evernote</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-facebook-orca/"><h5>Facebook Messenger</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-gm/"><h5>GMail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-messaging/"><h5>Google Messenger (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-talk/"><h5>Hangouts</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-google-android-apps-inbox/"><h5>Inbox by Gmail</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-instagram-android/"><h5>Instagram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-android-messaging/"><h5>Messaging (AOSP) (SMS/MMS)</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/org-thoughtcrime-securesms/"><h5>Signal</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/org-telegram-messenger/"><h5>Telegram</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/setup/per-app-config/com-wire/"><h5>Wire</h5></a>
+    
+  
+  </div>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/ru/panic/"><h5>Режим паники</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/encoding/"><h5>Кодировка</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/encryption-parameters/"><h5>Параметры шифрования</h5></a>
+    
+      <div class="menuindent">
+    <a class="menuentry" href="/ru/encryption-parameters/symmetric-keys/"><h5>Симметричные ключи</h5></a>
+    
+  
+  </div>
+    
+  
+  
+    <a class="menuentry" href="/ru/encrypting-images/"><h5>Шифрование изображений</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/faq/"><h5>Вопросы-Ответы</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/ru/contact/"><h5>О КОМПАНИИ</h5></a>
+    
+  
+  </div>
+    
+  
+  
+
+</div>
+
+</nav>
+
+<header class="w3-container w3-card-4 w3-theme w3-top oversec-header">
+
+  <span class="headline">
+  <i class="w3-opennav fa fa-bars" onclick="w3_open()"></i>
+ Oversec Help
+  </span>
+  <div style="float: right; display: inline-block; margin-right:5px">
+      <a class="noprepend" href="/de/setup/per-app-config/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/en/setup/per-app-config/"><img src="/static/flags/GB.png"></a>
+      <a class="noprepend" href="/es/setup/per-app-config/"><img src="/static/flags/ES.png"></a>
+      <a class="noprepend" href="/pt/setup/per-app-config/"><img src="/static/flags/PT.png"></a>
+      <a class="noprepend" href="/ru/setup/per-app-config/"><img src="/static/flags/RU.png"></a>
+
+  </div>
+</header>
+
+<div class="w3-container" style="margin-top:30px">
+    
+ 
+
+  <h4>List of apps with known issues:</h4>
+  <ul>
+
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-instagram-android/">Instagram</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-google-android-gm/">GMail</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-android-messaging/">Messaging (AOSP) (SMS/MMS)</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/org-telegram-messenger/">Telegram</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-google-android-apps-messaging/">Google Messenger (SMS/MMS)</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-google-android-apps-fireball/">Allo</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-google-android-apps-inbox/">Inbox by Gmail</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/org-thoughtcrime-securesms/">Signal</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-facebook-orca/">Facebook Messenger</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-wire/">Wire</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-google-android-talk/">Hangouts</a>
+          </li>
+       
+          <li>
+          <a  href="/ru/setup/per-app-config/com-evernote/">Evernote</a>
+          </li>
+       
+  </ul>
+ <h2>конфигурации приложения</h2>
+  <p><div class="buttoncircle"><img src="/setup/ic_settings_black_24dp.png"/></div>
+Примечание: Эта страница конфигурации также может быть открыта, нажав кнопку конфигурации Oversec из любого приложения, поддерживающего Oversec.</p>
+<p><a name="main"></a></p>
+<h2>Опции</h2>
+<p>Общие настройки</p>
+<h4>Включить Oversec</h4>
+<p>Oversec будет отображаться только в верхней части приложений, которые включены здесь.</p>
+<h4>Кнопка конфигурации</h4>
+<p>Показывает кнопку <a href="/buttons#button_config">Кнопка «Настройка»</a>, которая позволяет получить прямой доступ к этой странице конфигурации.</p>
+<p>Когда вы закончите с базовой настройкой, вы можете безопасно отключить эту кнопку - вы все равно можете получить доступ к настройке приложения через панель уведомлений или через главное приложение oversec.</p>
+<h4>Запустить скрыто</h4>
+<p>When checked, Oversec will not initially be shown when entering an Oversec-enabled app. You will have to tap on the (invisible)  [Hide Button] (/buttons#button_hide) to show the Oversec screen overlay.
+Если флажок установлен, Oversec первоначально не будет отображаться при входе в приложение с поддержкой Oversec. Вам нужно будет нажать на невидимую кнопку <a href="/buttons#button_hide">Кнопка «Скрыть»</a>, чтобы отобразить наложение экрана Oversec.</p>
+<h4>Кнопка «Скрыть»</h4>
+<p>Показывает кнопку <a href="/buttons#button_hide">Кнопка «Скрыть»</a>, которая позволяет временно скрыть накладку экрана Oversec.</p>
+<p>Подсказка: эти кнопки также дублируются как <a href="/panic">кнопка паники</a>, поэтому рекомендуется всегда держать эту кнопку включенной!</p>
+<h4>Кнопка «Расшифровать / Очистить»</h4>
+<p>Показывает кнопку <a href="/buttons#button_decrypt">Кнопка «Расшифровать / Очистить»</a>, которая позволяет расшифровать или очистить текущее поле ввода.</p>
+<h4>Кнопка «Создать»</h4>
+<p>Показывает кнопку <a href="/buttons#button_compose">Кнопка «Создать»</a>, которая позволяет вам шифровать и вставлять текст через буфер обмена</p>
+<h4>Camera Button</h4>
+<p>Показывает кнопку <a href="/buttons#button_camera">Кнопка «Камера»</a>, которая позволяет вам делать [непосредственно принимать и отправлять зашифрованные фотографии] (/ encrypting-images)</p>
+<p><a name="appearance"></a></p>
+<h2>Внешность</h2>
+<p>Внешний вид</p>
+<p>Точная настройка внешнего вида накладок Oversec - например, шрифты, размеры, отступы, цвета, прозрачные пленки и т. Д.
+<a name="lab"></a></p>
+<h2>Лаборатория</h2>
+<p>Расширенные и инкубационные опции</p>
+<h4>Кнопка информации</h4>
+<p>Показывает <a href="/buttons#button_info">Кнопка информации</a>, чтобы отобразить дополнительную информацию о шифровании.</p>
+<h4>Нажать, чтобы показать информацию</h4>
+<p>При нажатии на зашифрованный текст будет отображаться подробная информация о шифровании.</p>
+<p><strong>Предупреждение: Это может создавать помехи для пользовательского интерфейса нижележащего приложения!</strong></p>
+<h4>Длительно нажать, чтобы показать информацию</h4>
+<p>При длительном нажатии на зашифрованный текст будет отображаться подробная информация о шифровании.</p>
+<p><strong>Предупреждение: Это может создавать помехи для пользовательского интерфейса нижележащего приложения!</strong></p>
+<h4>Кнопка шифрования</h4>
+<p>Покажите кнопку <a href="/buttons#button_encrypt">Кнопка шифрования</a> рядом с активным полем ввода.</p>
+<p>  (Кнопка дешифрования также не будет отображаться, если кнопка шифрования не отображается)</p>
+<h4>Кнопка переключения шифрования при длительном нажатии</h4>
+<p>Показывает или скрывает кнопку <a href="/buttons#button_encrypt">Кнопка шифрования</a> при длительном нажатии на поле ввода.</p>
+<p><strong>Внимание! Это может помешать UX базового приложения!</strong></p>
+<h4>Показать немедленно входные диалоговые окна</h4>
+<p>Когда должно быть показано диалоговое окно ввода (пароль) для расшифровки, оно показывается немедленно, без предварительного запроса пользователя.</p>
+<h4>Уведомление</h4>
+<p>Показывать постоянное уведомление для управления Oversec через строку состояния Android.</p>
+<h4>Показывать расшифрованный текст над полем ввода</h4>
+<p>Показывать расшифрованный текст прямо <em>над</em> активным полем ввода, что облегчает просмотр или редактирование вручную накладываемого текста.</p>
+<h4>Расширить расшифрованный текст по вертикали</h4>
+<p>Выделяет больше вертикального пространства для расшифрованного текста, если он не вписывается в пространство, используемое зашифрованным текстом. Может заслонять часть нижележащего приложения.</p>
+<p><strong>Предупреждение. Может мешать части основного приложения.</strong></p>
+<h4>Сохранение разрывов строк</h4>
+<p>Если открытый текст содержит разрывы строк, вставьте равное количество разрывов в накладываемый текст.</p>
+<p><strong>Предупреждение: Утечка некоторой информации об открытом тексте.</strong></p>
+<h4>Добавить заполнение перед шифрованием</h4>
+<p>Добавить (при максимуме) это число произвольных байтов перед шифрованием. Это предотвращает угадывание взломщиком исходного сообщения по числу символов</p>
+<h4>Параметры шифрования одноэлементного класса</h4>
+<p>Сохраняет только один набор параметров шифрования на приложение. Это предназначено для заметок, содержащих только приложения, не должно включаться для коммуникационных приложений.</p>
+<h4>Всегда показывать параметры шифрования</h4>
+<p>Никогда не будут автоматически повторно использоваться предыдущие параметры шифрования.</p>
+<h4>Высококачественное считывание экрана</h4>
+<p>Выполняет более частое и более глубокое считывание экрана. Создает более гладкий пользовательский интерфейс за счет усиленного использования батареи.</p>
+<h4>Считывание всех видов</h4>
+<p>Включает виды, которые считаются как «Неважные». Это необходимо только для нескольких приложений. Это замедляет &appname; и использует больше энергии батареи!</p>
+<p><a name="spreadinvisibleencoding"></a></p>
+<h4>Распространение невидимого кодирования</h4>
+<p>Распространение невидимых символов в накладываемом тексте вместо ввода их всех вначале. Это необходимо для некоторых приложений, таких как, например, Инстаграмма</p>
+
+
+</div>
+
+
+<br/>
+<br/>
+<footer class="w3-container">
+<!--
+    &copy; Copyright 2016 by oversec.io.
+-->
+  </footer>
+</div> 
+</body>

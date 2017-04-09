@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "default")
+    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "en")
+    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -213,6 +213,8 @@ window.onload = prependAlternatives
       <a class="noprepend" href="/en/setup/per-app-config/com-evernote/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/es/setup/per-app-config/com-evernote/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/setup/per-app-config/com-evernote/"><img src="/static/flags/PT.png"></a>
+      <a class="noprepend" href="/ru/setup/per-app-config/com-evernote/"><img src="/static/flags/RU.png"></a>
+
   </div>
 </header>
 
