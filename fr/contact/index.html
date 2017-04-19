@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/contact/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/contact/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/contact/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/contact/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/contact/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/contact/"><img src="/static/flags/RU.png"></a>

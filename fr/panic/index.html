@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Panic — Oversec Online Help</title>
+  <title>Panique — Oversec Online Help</title>
 
      <script>
     /*
@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/panic/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/panic/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/panic/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/panic/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/panic/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/panic/"><img src="/static/flags/RU.png"></a>
@@ -272,22 +273,22 @@ window.onload = prependAlternatives
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Panic</h2>
-  <p>Activating Panic-Mode will <em>immediately</em></p>
+  <h2>Panique</h2>
+  <p>L'activation de Mode Panique <em>immédiatement</em></p>
 <ul>
-<li>forget all entered passwords for "simple" encryption</li>
-<li>close all unlocked symmetric keys </li>
-<li>close all cached keys in OpenKeyChain</li>
-<li>remove all Oversec overlays, buttons and notifications.</li>
-<li>force-stop Oversec</li>
+<li>Oublie tous les mots de passe saisis pour un cryptage "simple"</li>
+<li>Ferme toutes les clés symétriques déverrouillées</li>
+<li>Ferme toutes les clés en cache dans OpenKeyChain</li>
+<li>Supprime tous les superpositions Oversec, les boutons et les notifications.</li>
+<li>Arrête avec force Oversec</li>
 </ul>
-<p>so that no indication of anything "secret" will be left on the device (Of course an investigator will still see that the Oversec app is installed on the device)</p>
-<p>Panic-Mode can be activated by</p>
+<p>de sorte qu'aucune indication de quoi que ce soit « secret » sera laissé sur l'appareil (Bien sûr, un enquêteur verra encore que l'application Oversec est installé sur l'appareil)</p>
+<p>Mode Panique peut être activé par</p>
 <ul>
-<li>Long-tapping the <a href="/buttons#button_hide">Hide Button</a></li>
-<li>Tapping "STOP" in the Oversec notification</li>
+<li>Appuyez longuement sur <a href="/buttons#button_hide">Bouton "Invisibilité"</a></li>
+<li>Appuyez "STOP" dans la notification Oversec</li>
 </ul>
-<p>To re-enable Oversec after Panic-Mode has been entered, go to the main Oversec app and tap on "Reactivate"</p>
+<p>Pour réactiver Oversec après la saisie de Panic-Mode, accédez à l'application principale Oversec et appuyez sur "Réactiver"</p>
 
 
 </div>

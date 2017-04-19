@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Setup — Oversec Online Help</title>
+  <title>Installation — Oversec Online Help</title>
 
      <script>
     /*
@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/setup/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/setup/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/setup/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/setup/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/setup/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/setup/"><img src="/static/flags/RU.png"></a>
@@ -272,49 +273,50 @@ window.onload = prependAlternatives
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Setup</h2>
+  <h2>Installation</h2>
   <p><a name="main_help"></a>
 <a name="main_help_acsconfig"></a></p>
-<h3>Required Setup</h3>
-<p>The basic operating principle of Oversec is that it constantly monitors the screen for encrypted text.</p>
-<p>To be able to read the screen contents, it has to be enabled as a so called "Accessibility Service".</p>
-<p>So as the first step, before you can use Oversec, you need to enable Oversec as an Accessibility Service in Androids "Accessibility Settings".</p>
-<p>Tapping on "Configure" will lead you directly to the relevant Settings page:</p>
-<p>Now tap on "Oversec"
+<h3>Configuration requise</h3>
+<p>Le principe de base de fonctionnement d'Oversec est qu'il surveille constamment l'écran pour le texte chiffré.</p>
+<p>Pour pouvoir lire le contenu de l'écran, il doit être activé comme un «service d'accessibilité».</p>
+<p>Donc, en tant que première étape, avant d'utiliser Oversec, vous devez activer Oversec en tant que service d'accessibilité dans les «paramètres d'accessibilité» d'Android.</p>
+<p>Si vous tapez sur "Configurer", vous accédez directement à la page Paramètres pertinente:</p>
+<p>Maintenant appuyez sur "Oversec"
 <br></br>
-<img src="acs_settings_step_1_L.png"></img>
+<img src="/setup/acs_settings_step_1_L.png"></img>
 <br></br>
-Now tap on the switch in the upper right corner
+Maintenant appuyez sur le commutateur dans le coin supérieur droit
 <br></br>
-<img src="acs_settings_step_2_L.png"></img>
+<img src="/setup/acs_settings_step_2_L.png"></img>
 <br></br>
-Tap on "OK"
+Appuyez sur "OK"
 <br></br>
-<img src="acs_settings_step_3_L.png"></img>
+<img src="/setup/acs_settings_step_3_L.png"></img>
 <br></br>
-Now the switch should be ON. Tap on "BACK"
+Maintenant, le commutateur doit être activé. Retourner.
 <br></br>
-<img src="acs_settings_step_4_L.png"></img>
+<img src="/setup/acs_settings_step_4_L.png"></img>
 <br></br>
-Now Oversec should be "on". Tap on "BACK"
+Maintenant, Oversec devrait être "activé". Retourner
 <br></br>
-<img src="acs_settings_step_5_L.png"></img>
+<img src="/setup/acs_settings_step_5_L.png"></img>
 <br></br></p>
 <p><a name="main_help_accessibilitysettingsnotresolvable"></a>
-On some phones with a custom Android version, the settings page that let's you configure Accessibility Services is not available or not in the expected place.</p>
-<p>Please manually try to locate the "Accessibility" page in your phone's Settings and then <a href="#main_help_acsconfig">enable Oversec as an Accessibility Service.</a></p>
-<h3><a name="main_apps"></a>Configure Apps for Oversec</h3>
-<p>This is the list of all apps you currently have installed.</p>
-<p>The Oversec buttons and overlays will only show on top of apps that are checked here.
-Please review the list and check all apps that you want to work with Oversec.</p>
-<p><em>Note: Tap on the questionmark icon on any app to show additional, Oversec-related information for this app.</em></p>
-<p><em>Note: You can also deactivate an app for Oversec after pressing the Oversec Config-Button while the app is shown.</em></p>
-<h3>Symmetric Keys</h3>
-<p>See <a href="/encryption-parameters/symmetric-keys">Symmetric Keys</a></p>
-<h3><a name="main_settings"></a>General Settings</h3>
-<h4>Allow Screenshots</h4>
-<p>By default, Oversec prevents the system from taking screenshots while showing sensitive information. Depending on the way the screenshots are made, taking screenshots either fails or produces a blank or black image.</p>
-<p>You can disable this behavior temporarily if you want to take screenshots to show or tell about Oversec, but we strongly recommend to keep this setting OFF!</p>
+Sur certains téléphones avec une version Android personnalisée, la page de paramètres qui vous permet de configurer les Services d'accessibilité n'est pas disponible ou non dans l'endroit prévu.</p>
+<p>Veuillez essayer manuellement de localiser la page "Accessibilité" dans les paramètres de votre téléphone, puis <a href="#main_help_acsconfig"> activer Oversec en tant que service d'accessibilité. </a></p>
+<h3><a name="main_apps"></a>Configurer les applications pour Oversec</h3>
+<p>Voici la liste de toutes les applications que vous avez actuellement installées.</p>
+<p>Les boutons et les superpositions Oversec apparaîtront uniquement sur les applications vérifiées ici.
+Veuillez consulter la liste et vérifier toutes les applications que vous souhaitez utiliser avec Oversec.</p>
+<p><em>Remarque: appuyez sur l'icône du point d'interrogation sur n'importe quelle application pour afficher des informations supplémentaires relatives à l'Oversec pour cette application.</em>
+ 
+<em>Remarque: Vous pouvez également désactiver une application pour Oversec après avoir appuyé sur le bouton de configuration Oversec pendant l'affichage de l'application.</em></p>
+<h3>Clés symétriques</h3>
+<p>Voir <a href="/encryption-parameters/symmetric-keys">Clés symétriques</a></p>
+<h3><a name="main_settings"></a>Paramètres généraux</h3>
+<h4>Autoriser les captures d'écran</h4>
+<p>Par défaut, Oversec empêche le système de prendre des captures d'écran tout en affichant des informations sensibles. Selon la façon dont les captures d'écran sont faites, prendre des captures d'écran échoue ou produit une image vierge ou noire.</p>
+<p>Vous pouvez désactiver ce comportement temporairement si vous souhaitez prendre des captures d'écran pour afficher ou informer sur Oversec, mais nous vous recommandons vivement de garder ce réglage hors tension!</p>
 
 
 </div>

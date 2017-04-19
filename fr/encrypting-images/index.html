@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Encrypting Images — Oversec Online Help</title>
+  <title>Cryptage d&#39;images — Oversec Online Help</title>
 
      <script>
     /*
@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/encrypting-images/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/encrypting-images/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/encrypting-images/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/encrypting-images/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/encrypting-images/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/encrypting-images/"><img src="/static/flags/RU.png"></a>
@@ -272,36 +273,36 @@ window.onload = prependAlternatives
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Encrypting Images</h2>
-  <h3>Encrypting an existing image</h3>
-<p>To encrypt and send an existing image:</p>
+  <h2>Cryptage d&#39;images</h2>
+  <h3>Crypter une image existante</h3>
+<p>Pour chiffrer et envoyer une image existante:</p>
 <ul>
-<li>In your Photos or Gallery app, open the picture</li>
-<li>Tap on "Share"</li>
-<li>Tap on "Encrypt Image"</li>
-<li>Next, tap on the app you want to send the encrypted image with</li>
-<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
-<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
-<li>Select chat / contact / recipient in the sender app.</li>
+<li>Dans votre application Photos ou Galerie, ouvrez la photo</li>
+<li>Appuyez sur "Partager"</li>
+<li>Tapez sur "Chiffrer l'image"</li>
+<li>Ensuite, appuyez sur l'application à laquelle vous souhaitez envoyer l'image cryptée avec</li>
+<li>Entrez / ajustez <a href="/encryption-parameters">paramètres de cryptage</a></li>
+<li>Appuyez sur <a href="/buttons#button_encrypt">le bouton "Chiffrer"</a></li>
+<li>Sélectionnez le chat / contact / destinataire dans l'application expéditeur.</li>
 </ul>
-<h3>Taking an encrypted photo</h3>
-<p>Oversec allows you to take a photo and send or store it as encrypted photo, without ever saving the plain photo to your device!</p>
-<p>To take an encrypted photo:</p>
+<h3>Prise de photo chiffrée</h3>
+<p>Oversec vous permet de prendre une photo et de l'envoyer ou la stocker sous forme de photo cryptée, sans jamais enregistrer la photo simple sur votre appareil!</p>
+<p>Pour prendre une photo chiffrée:</p>
 <ul>
-<li>Enable the <a href="/buttons#button_camera">Camera button</a> for the app</li>
-<li>Tap on the  <a href="/buttons#button_camera">Camera button</a> </li>
-<li>Take and confirm the photo</li>
-<li>Enter / adjust <a href="/encryption-parameters">encryption parameters</a></li>
-<li>Tap the <a href="/buttons#button_encrypt">Encrypt button</a></li>
-<li>Select chat / contact / recipient in the underlying app.</li>
+<li>Activez <a href="/buttons#button_camera">le bouton "Caméra"</a> pour l'application</li>
+<li>Appuyez <a href="/buttons#button_camera">le bouton "Caméra"</a></li>
+<li>Prenez et confirmez la photo</li>
+<li>Entrez / ajustez <a href="/encryption-parameters">paramètres de cryptage</a></li>
+<li>Appuyez sur <a href="/button#button_encrypt">le bouton "Chiffrer"</a></li>
+<li>Sélectionnez le chat / contact / destinataire dans l'application sous-jacente.</li>
 </ul>
-<h3>Decrypting an image</h3>
-<p>To decrypt and show the contents of an encrypted image:</p>
+<h3>Décryptage d'une image</h3>
+<p>Pour déchiffrer et afficher le contenu d'une image cryptée:</p>
 <ul>
-<li>Open / view the encrypted image</li>
-<li>Tap on "Share" </li>
-<li>Tap on "Decrypt Image"</li>
-<li>Enter passphrase / unlock key</li>
+<li>Ouvrir / afficher l'image cryptée</li>
+<li>Appuyez sur "Partager"</li>
+<li>Appuyez sur "Decrypt Image"</li>
+<li>Entrez la clé de passe / déverrouillage</li>
 </ul>
 
 

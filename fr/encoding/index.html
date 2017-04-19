@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Encoding — Oversec Online Help</title>
+  <title>Codage — Oversec Online Help</title>
 
      <script>
     /*
@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/encoding/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/encoding/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/encoding/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/encoding/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/encoding/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/encoding/"><img src="/static/flags/RU.png"></a>
@@ -272,26 +273,26 @@ window.onload = prependAlternatives
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Encoding</h2>
-  <p>Oversec provides multiple methods of encoding an encrypted message:</p>
-<h3>Invisible (Decoy) Encoding</h3>
-<p>This unique method encodes the encrypted text as invisible (zero width) characters at the beginning of the text.
-The text is then padded with  <a href="/setup/decoy">decoy content</a> to make sure that the receiving device provides enough screen-space to render the decrypted</p>
+  <h2>Codage</h2>
+  <p>Oversec fournit plusieurs méthodes de codage d'un message chiffré:</p>
+<h3>Codage Invisible (Leurre)</h3>
+<p>Cette méthode unique encode le texte chiffré comme un caractère invisible (zéro largeur) au début du texte.
+Le texte est ensuite rembourré avec [contenu de leurre] (/setup/decoy) pour vous assurer que le périphérique de réception offre suffisamment d'espace d'écran pour rendre décrypté</p>
 <p><a name="insufficientpadding"></a>
-When entering or editing the decoy text, a border is drawn around the input field. 
-The border color will turn red if the decoy text is too short and there will probably not be enough screen space on the receiving device to show the decrypted text.  The border color will turn green if enough decoy text has been entered.</p>
+Lorsque vous entrez ou modifiez le texte du leurre, une bordure est dessinée autour du champ de saisie.
+La couleur de la bordure devient rouge si le texte du leurre est trop court et il n'y aura probablement pas assez d'espace d'écran sur le périphérique récepteur pour afficher le texte déchiffré. La couleur de la bordure devient verte si un texte de leurres suffisant a été entré.</p>
 <p><a name="corrupted"></a>
-When editing the decoy text, it may happen that you accidentally delete parts of the invisible encrypted text. If this happens, Oversec will show an error  and you will have to start over! (There is no way to recover the plain text!)</p>
+Lorsque vous éditez le texte du leurre, il se peut que vous supprimez accidentellement certaines parties du texte crypté invisible. Si cela se produit, Oversec affichera une erreur et vous devrez recommencer! (Il n'y a aucun moyen de récupérer le texte brut!)</p>
 <p><a name="settextfailed"></a>
-Some Apps limit the number of characters that can be written back into an input field and crash or freeze when Oversec tries to write back the encoded text to the app.
-There's unfortunately nothing we can do about this, other than that you need to use a different encryption method or encoding:</p>
-<h3>BASE64-Encoding</h3>
-<p>This encodes the encrypted text as a series of printable characters, guaranteed to work with all apps and systems.</p>
-<p>This is mainly intended for use with <a href="/encryption-parameters/#sym">symmetric encryption</a> for legacy SMS text messages.</p>
+Certaines applications limitent le nombre de caractères qui peuvent être écrits dans un champ de saisie et se bloquent ou se bloquent lorsque Oversec essaie d'écrire le texte encodé dans l'application.
+Il n'y a malheureusement rien que nous puissions faire à ce sujet, sauf que vous devez utiliser une méthode ou un codage de cryptage différent:</p>
+<h3>Codage BASE64</h3>
+<p>Cela code le texte chiffré comme une série de caractères imprimables, garantissant le fonctionnement de toutes les applications et systèmes.</p>
+<p>Ceci est principalement destiné à être utilisé avec [cryptage symétrique] (/encryption-parameters/#sym) pour les messages texte SMS.</p>
 <h3>Ascii-Armoured PGP</h3>
-<p>This is only available for <a href="/encryption-parameters/#pgp">PGP encoded</a> messages and encodes them as a "ascii armoured" string.</p>
-<h3>Symmetric Encoding vs. PGP Encoding</h3>
-<p>PGP encoding produces much more data than symmetric encryption. Please use symmetric encoding if data length is a concern!</p>
+<p>Ceci est uniquement disponible pour les messages <a href="/encryption-parameters/#pgp">Codage PGP</a> et les encode comme une chaîne "blindé ascii".</p>
+<h3>Codage Symétrique vs. Codage PGP</h3>
+<p>Le codage PGP produit beaucoup plus de données que le cryptage symétrique. Utilisez le codage symétrique si la longueur des données est une préoccupation!</p>
 
 
 </div>

@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
-  <title>Encryption Parameters — Oversec Online Help</title>
+  <title>Paramètres de Chiffrement — Oversec Online Help</title>
 
      <script>
     /*
@@ -19,9 +19,9 @@
     This notice must stay intact
     */
     //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes=new Array("en", "de", "es", "pt", "ru", "default")
+    var langcodes=new Array("en", "de", "fr", "es", "pt", "ru", "default")
     //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects=new Array("en", "de", "es", "pt", "ru", "en")
+    var langredirects=new Array("en", "de", "fr", "es", "pt", "ru", "en")
     var languageinfo=navigator.language? navigator.language : navigator.userLanguage
     var gotodefault=1
     
@@ -134,29 +134,25 @@ window.onload = prependAlternatives
 
 <div >
   
-    <a class="menuentry" href="/fr/"><h5>Welcome</h5></a>
+    <a class="menuentry" href="/fr/"><h5>Bienvenue</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/buttons/"><h5>Buttons</h5></a>
+    <a class="menuentry" href="/fr/buttons/"><h5>Boutons</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/panic/"><h5>Panic</h5></a>
-    
-  
-  
-    <a class="menuentry" href="/fr/setup/"><h5>Setup</h5></a>
+    <a class="menuentry" href="/fr/setup/"><h5>Installation</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/setup/decoy/"><h5>Decoy Content</h5></a>
+    <a class="menuentry" href="/fr/setup/decoy/"><h5>Contenu Leurre</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/common-settings/"><h5>General Settings</h5></a>
+    <a class="menuentry" href="/fr/setup/common-settings/"><h5>Paramètres généraux</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Per-App Configuration</h5></a>
+    <a class="menuentry" href="/fr/setup/per-app-config/"><h5>Configuration par application</h5></a>
     
       <div class="menuindent">
     <a class="menuentry" href="/fr/setup/per-app-config/com-google-android-apps-fireball/"><h5>Allo</h5></a>
@@ -213,21 +209,25 @@ window.onload = prependAlternatives
     
   
   
-    <a class="menuentry" href="/fr/encoding/"><h5>Encoding</h5></a>
+    <a class="menuentry" href="/fr/panic/"><h5>Panique</h5></a>
     
   
   
-    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Encryption Parameters</h5></a>
+    <a class="menuentry" href="/fr/encoding/"><h5>Codage</h5></a>
+    
+  
+  
+    <a class="menuentry" href="/fr/encryption-parameters/"><h5>Paramètres de Chiffrement</h5></a>
     
       <div class="menuindent">
-    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Symmetric Keys</h5></a>
+    <a class="menuentry" href="/fr/encryption-parameters/symmetric-keys/"><h5>Clés symétriques</h5></a>
     
   
   </div>
     
   
   
-    <a class="menuentry" href="/fr/encrypting-images/"><h5>Encrypting Images</h5></a>
+    <a class="menuentry" href="/fr/encrypting-images/"><h5>Cryptage d&#39;images</h5></a>
     
   
   
@@ -260,6 +260,7 @@ window.onload = prependAlternatives
   <div id="langDropdown" class="dropdown-content">
       <a class="noprepend" href="/en/encryption-parameters/"><img src="/static/flags/GB.png"></a>
       <a class="noprepend" href="/de/encryption-parameters/"><img src="/static/flags/DE.png"></a>
+      <a class="noprepend" href="/fr/encryption-parameters/"><img src="/static/flags/FR.png"></a>
       <a class="noprepend" href="/es/encryption-parameters/"><img src="/static/flags/ES.png"></a>
       <a class="noprepend" href="/pt/encryption-parameters/"><img src="/static/flags/PT.png"></a>
       <a class="noprepend" href="/ru/encryption-parameters/"><img src="/static/flags/RU.png"></a>
@@ -272,36 +273,37 @@ window.onload = prependAlternatives
 
 <div class="w3-container" style="margin-top:30px">
     
-  <h2>Encryption Parameters</h2>
+  <h2>Paramètres de Chiffrement</h2>
   <p><a name="simple"><br/></a></p>
 <h1>Simple</h1>
-<p>Encrypt by sharing a simple password only.</p>
-<p>This is a good way to try out Oversec, but it's possibly not very secure: An attacker can simply try out / guess the password, so make sure you use a very long and complicated password.</p>
-<h3>Adding Passwords</h3>
-<p>To encrypt or decrypt, you will first have to add another password by tapping "Add Password". Oversec will keep and remember a password until the time you specify when entering the password.</p>
-<p>Once a password has expired, it is completely gone. You will have to enter it again on this page!</p>
-<h3>Selecting Passwords</h3>
-<p>To encrypt with one or multiple passwords, simply tap on the checkbox next to each password. Oversec will encrypt the message for each of the selected passwords - anybody who knows at least one of the selected passwords will be able to decrypt the message.</p>
+<p>Chiffrer en partageant uniquement un mot de passe simple.</p>
+<p>C'est un bon moyen d'essayer Oversec, mais ce n'est peut-être pas très sécurisé: un attaquant peut simplement essayer / deviner le mot de passe, alors assurez-vous d'utiliser un mot de passe très long et compliqué.</p>
+<h3>Ajout de mots de passe</h3>
+<p>Pour chiffrer ou déchiffrer, vous devez d'abord ajouter un autre mot de passe en appuyant sur "Ajouter un mot de passe". Oversec conservera et se souviendra d'un mot de passe jusqu'à l'heure que vous spécifiez lors de la saisie du mot de passe.</p>
+<p>Une fois qu'un mot de passe a expiré, il est complètement disparu. Vous devrez l'entrer à nouveau sur cette page!</p>
+<h3>Sélection des mots de passe</h3>
+<p>Pour chiffrer avec un ou plusieurs mots de passe, appuyez simplement sur la case à cocher à côté de chaque mot de passe. Oversec va chiffrer le message pour chacun des mots de passe sélectionnés - Quiconque connait au moins un des mots de passe sélectionnés pourra décrypter le message.</p>
 <p><a name="sym"><br/></a></p>
-<h1>Symmetric</h1>
-<p>Encrypt by sharing a secure symmetric key</p>
-<p>This is a very safe way to encrypt, but you will have to share the encryption key through a safe channel - ideally by meeting in person and …<a href="/encryption-parameters/symmetric-keys/key-create">sharing the symmetric key via Camera and QR-Code</a>.</p>
-<h3>Adding keys</h3>
-<p>Please use the main Oversec app to <a href="/encryption-parameters/symmetric-keys">create and organize your symmetric keys</a>.</p>
-<h3>Selecting Keys</h3>
-<p>To encrypt with one or multiple keys, simply tap on the checkbox next to each key. Oversec will encrypt the message for each of the selected keys - anybody who has at least one of the selected keys will be able to decrypt the message.</p>
+<h1>Symétrique</h1>
+<p>Chiffrer en partageant une clé symétrique sécurisée</p>
+<p>This is a very safe way to encrypt, but you will have to share the encryption key through a safe channel - ideally by meeting in person and <a href="/encryption-parameters/symmetric-keys/key-create">sharing the symmetric key via Camera and QR-Code</a>.</p>
+<p>C'est un moyen très sûr de chiffrer, mais vous devrez partager la clé de cryptage via un canal sécurisé - idéalement en vous rendant en personne et <a href="/encryption-parameters/symmetric-keys/key-create">partageant la clé symétrique via Camera et QR-Code</a>.</p>
+<h3>Ajout de clés</h3>
+<p>Utilisez l'application principale Oversec pour <a href="/encryption-parameters/symmetric-keys">créer et organiser vos clés symétriques</a>.</p>
+<h3>Sélectionner des clés</h3>
+<p>Pour chiffrer avec une ou plusieurs clés, appuyez simplement sur la case à cocher à côté de chaque touche. Oversec va chiffrer le message pour chacune des clés sélectionnées - quiconque possède au moins une des clés sélectionnées pourra décrypter le message.</p>
 <p><a name="pgp"><br/></a></p>
 <h2>PGP</h2>
-<p>Encrypt with PGP public/private keys. You need the <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeyChain App</a> to use this method and manage your PGP keys.
+<p>Chiffrer avec les clés public / privé PGP. Vous avez besoin de <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">OpenKeyChain</a> pour utiliser cette méthode et gérer vos clés PGP.
 <br/></p>
-<h4>Important: PGP encryption adds about 2 kilobytes or more of data to your encrypted message. Please consider this and depending on your data plan you might want to use symmetric encryption instead (which requires much less data).</h4>
-<h3>Own Key</h3>
-<p>If you haven't done so yet, select your own PGP key next to "myself". You need to do this if you want to be able to encrypt messages yourself or if you want to sign messages.</p>
-<h3>Signing a message</h3>
-<p>Check the "Sign Message" checkbox to sign the message with your own private key.</p>
-<h3>Recipients</h3>
-<p>Tap the (+) button to add recipients. This will open the OpenKeyChain app where you can select one or more public keys. (You can download / manage public keys in that app!)</p>
-<p>Oversec will encrypt the message with the public keys of each of the selected recipients and yourself - anybody who has a matching private key will be able to decrypt his message.</p>
+<h4>Important: le cryptage PGP ajoute environ 2 kilo-octets ou plus de données à votre message chiffré. S'il vous plaît considérer cela et selon votre plan de données, vous voudrez peut-être utiliser un cryptage symétrique à la place (ce qui nécessite beaucoup moins de données).</h4>
+<h3>Clé propre</h3>
+<p>Si vous ne l'avez pas encore fait, sélectionnez votre propre clé PGP à côté de "Moi-même". Vous devez le faire si vous souhaitez chiffrer les messages vous-même ou si vous souhaitez signer des messages.</p>
+<h3>Signature d'un message</h3>
+<p>Cochez la case "Signer le message" pour signer le message avec votre propre clé privée.</p>
+<h3>Récipiendaires</h3>
+<p>Appuyez sur le bouton (+) pour ajouter des destinataires. Cela ouvrira l'application OpenKeyChain où vous pouvez sélectionner une ou plusieurs clés publiques. (Vous pouvez télécharger / gérer des clés publiques dans cette application!)</p>
+<p>Oversec va chiffrer le message avec les clés publiques de chacun des destinataires sélectionnés et vous-même - toute personne ayant une clé privée correspondante pourra décrypter son message.</p>
 
 
 </div>
